@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<odoo>
+
+
+    <!-- Customer Data Master -->
+    <!-- Form view of new dishes data -->
+    <record id="view_food_dishes_form" model="ir.ui.view">
+        <field name="name">food_dish.form</field>
+        <field name="model">food.dish</field>
+        <field name="arch" type="xml">
+            <form string="Dish Detail">
+                <sheet>
+                    <group>
+                        <field name="dishes"/>
+                        <newline/>
+                        <field name="shahipaneeringredients"/>
+                        <newline/>
+                        <field name="chickeningredients"/>
+                        <newline/>
+<!--                        <field name="curry_ingredients"/>-->
+<!--                        <newline/>-->
+<!--                        <field name="naan_ingredients"/>-->
+<!--                        <newline/>-->
+<!--                        <field name="mangolassi_ingredients"/>-->
+<!--                        <newline/>-->
+                        <field name="new_dish"/>
+                        <newline/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+<!--    Show the ingredients for the dish selected. How to do that??????-->
+
+    <!-- Tree view of dishes offered -->
+    <record id="view_food_dishes_tree" model="ir.ui.view">
+        <field name="name">food_dish.tree</field>
+        <field name="model">food.dish</field>
+        <field name="arch" type="xml">
+            <tree string="Dish Details">
+                <field name="dishes"/>
+                <field name="shahipaneeringredients"/>
+                <field name="chickeningredients"/>
+<!--                <field name="chicken_ingredients"/>-->
+<!--                <field name="curry_ingredients"/>-->
+<!--                <field name="naan_ingredients"/>-->
+<!--                <field name="mangolassi_ingredients"/>-->
+                <field name="new_dish"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Search view of dishes offered -->
+    <record id="view_food_dishes_search" model="ir.ui.view">
+        <field name="name">food_dish.search</field>
+        <field name="model">food.dish</field>
+        <field name="arch" type="xml">
+            <search string="Dishes Detail">
+                <field name="dishes"/>
+                <field name="shahipaneeringredients"/>
+                <field name="chickeningredients"/>
+<!--                <field name="chicken_ingredients"/>-->
+<!--                <field name="curry_ingredients"/>-->
+<!--                <field name="naan_ingredients"/>-->
+<!--                <field name="mangolassi_ingredients"/>-->
+                <field name="new_dish"/>
+                <newline/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action of dishes offered -->
+    <record id="open_view_food_dishes_form_tree"
+            model="ir.actions.act_window">
+        <field name="name">Dishes</field>
+        <field name="res_model">food.dish</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+   <!-- Parent Menu -->
+    <menuitem name="Restaurant"
+              id="restaurant_top_menu"/>
+
+
+    <!-- Main Menu -->
+    <menuitem name="Dishes"
+              id="dishes_menu"
+              action="open_view_food_dishes_form_tree"
+              parent="restaurant_top_menu"/>
+
+
+    <!-- Sub Menu --> <!-- add page here!!!!!!! -->
+
+    <menuitem name="Dishes Allergy Information"
+              id="dishes_allergy"
+              action="open_view_food_dishes_form_tree"
+              parent="dishes_menu"/>
+
+
+    <!-- Sub Menu --><!-- add page here!!!!! -->
+
+    <menuitem name="Add Suggestions or Reviews"
+              id="dishes_suggestions"
+              action="open_view_food_dishes_form_tree"
+              parent="dishes_menu"/>
+
+
+</odoo>

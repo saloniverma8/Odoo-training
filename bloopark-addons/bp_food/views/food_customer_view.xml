@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<odoo>
+
+
+    <!-- Customer Data Master -->
+    <!-- Form view of new customer data -->
+    <record id="view_bp_food_customers_form" model="ir.ui.view">
+        <field name="name">bp_food_customers.form</field>
+        <field name="model">bp.food.customers</field>
+        <field name="arch" type="xml">
+            <form string="Customer Detail">
+                <sheet>
+                    <group>
+                        <field name="name" colspan="1"/>
+                        <newline/>
+                        <field name="number"/>
+                        <newline/>
+                        <field name="email"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree view of hotel restaurant tables -->
+    <record id="view_bp_food_customers_tree" model="ir.ui.view">
+        <field name="name">bp_food_customers.tree</field>
+        <field name="model">bp.food.customers</field>
+        <field name="arch" type="xml">
+            <tree string="Customer Details">
+                <field name="name"/>
+                <field name="number"/>
+                <field name="email"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Search view of hotel restaurant tables -->
+    <record id="view_bp_food_customers_search" model="ir.ui.view">
+        <field name="name">bp_food_customers.search</field>
+        <field name="model">bp.food.customers</field>
+        <field name="arch" type="xml">
+            <search string="Customer Detail">
+                <field name="name"/>
+                <field name="number"/>
+                <field name="email"/>
+                <newline/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action of hotel restaurant tables -->
+    <record id="open_view_bp_food_customers_form_tree"
+            model="ir.actions.act_window">
+        <field name="name">Customers</field>
+        <field name="res_model">bp.food.customers</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Parent Menu -->
+    <menuitem name="Restaurant"
+              id="restaurant_top_menu"/>
+
+
+    <!-- Main Menu -->
+    <menuitem name="Customers"
+              id="customer_menu"
+              action="open_view_bp_food_customers_form_tree"
+              parent="restaurant_top_menu"/>
+
+
+<!--        &lt;!&ndash; Sub Menu &ndash;&gt; &lt;!&ndash; add page here!!!!!!! &ndash;&gt;-->
+
+<!--        <menuitem name="Customers Data Privacy"-->
+<!--                  id="customer_data_privacy"-->
+<!--                  parent="customer_menu"/>-->
+
+
+<!--        &lt;!&ndash; Sub Menu &ndash;&gt;&lt;!&ndash; add page here!!!!! &ndash;&gt;-->
+
+<!--        <menuitem name="EULA"-->
+<!--                  id="customer_eula"-->
+<!--                  parent="customer_menu"/>-->
+
+
+
+
+</odoo>
