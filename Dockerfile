@@ -3,7 +3,7 @@ LABEL maintainer="Bloopark Systems. <info@bloopark.de>"
 
 USER root
 # Mount Customize /odoo/"addons" folders for users addons
-RUN mkdir -p /odoo/bloopark-addons
+RUN mkdir -p /mnt/extra-addons
 
 COPY ./requirements.txt /odoo/requirements_c.txt
 # Install Chromium

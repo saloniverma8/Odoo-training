@@ -10,8 +10,8 @@ services:
     stdin_open: true
     volumes:
       - odoo-odoo14-data:/var/lib/odoo
-      - ./config/odoo_source.conf:/etc/odoo.conf
-      - ./bloopark-addons:/odoo/bloopark-addons
+      - ./config/odoo.conf:/etc/odoo.conf
+      - ./bloopark-addons:/mnt/extra-addons
     restart: always # run as a service
   db:
     image: postgres:12
