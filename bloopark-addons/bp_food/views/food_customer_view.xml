@@ -60,7 +60,8 @@
 
     <!-- Parent Menu -->
     <menuitem name="Restaurant"
-              id="restaurant_top_menu"/>
+              id="restaurant_top_menu"
+              sequence="0"/>
 
 
     <!-- Main Menu -->
