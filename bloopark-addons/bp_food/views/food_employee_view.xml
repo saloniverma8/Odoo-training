@@ -59,23 +59,24 @@
             model="ir.actions.act_window">
         <field name="name">Employee</field>
         <field name="res_model">food.employees</field>
-        <field name="view_mode">form,tree</field>
+        <field name="view_mode">tree,form</field>
     </record>
 
-    <!-- Main Module Menu -->
+      <!-- Parent Menu -->
     <menuitem name="Restaurant"
-              id="restaurant_top_menu"/>
+              id="restaurant_top_menu"
+              sequence="0"/>
 
 
-    <!-- Main Menu -->
-    <menuitem name="Employees"
-              id="employee_menu"
-              parent="restaurant_top_menu"/>
+<!--    &lt;!&ndash; Main Menu &ndash;&gt;-->
+<!--    <menuitem name="Employees"-->
+<!--              id="employee_menu"-->
+<!--              parent="restaurant_top_menu"/>-->
 
     <menuitem name="Employees"
               id="menu_open_view_food_employees_form_tree"
               action="open_view_food_employees_form_tree"
-              parent="employee_menu"/>
+              parent="restaurant_top_menu"/>
 
 
 </odoo>
