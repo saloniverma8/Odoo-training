@@ -27,6 +27,7 @@
         'security/ir.model.access.csv',
         'views/food_customer_view.xml',
         'views/food_employee_view.xml',
+        'views/food_employeestype_view.xml',
         # 'views/food_dish_view.xml',
     ],
     # only loaded in demonstration mode
