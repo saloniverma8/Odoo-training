@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<odoo>
+
+
+    <!-- Customer Data Master -->
+    <!-- Form view of new employee data -->
+    <record id="view_food_employeestype_form" model="ir.ui.view">
+        <field name="name">food_employeestype.form</field>
+        <field name="model">food.employeestype</field>
+        <field name="arch" type="xml">
+            <form string="New Employee Suggestions Form">
+                <sheet>
+                    <group>
+                        <field name="occupation"/>
+                        <newline/>
+                        <field name="comments"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree view of hotel restaurant tables -->
+    <record id="view_food_employeestype_tree" model="ir.ui.view">
+        <field name="name">food_employeestype.tree</field>
+        <field name="model">food.employeestype</field>
+        <field name="arch" type="xml">
+            <tree string="New Employee Suggestions Form">
+                <field name="occupation"/>
+                <field name="comments"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Search view of hotel restaurant tables -->
+    <record id="view_food_employeestype_search" model="ir.ui.view">
+        <field name="name">food_employeestype.search</field>
+        <field name="model">food.employeestype</field>
+        <field name="arch" type="xml">
+            <search string="New Employee Suggestions Form">
+                <field name="occupation"/>
+                <field name="comments"/>
+                <newline/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action of hotel restaurant tables -->
+    <record id="open_view_food_employeestype_form_tree"
+            model="ir.actions.act_window">
+        <field name="name">Employee</field>
+        <field name="res_model">food.employees</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+      <!-- Parent Menu -->
+    <menuitem name="Restaurant"
+              id="restaurant_top_menu"
+              sequence="0"/>
+
+
+<!--    &lt;!&ndash; Main Menu &ndash;&gt;-->
+<!--    <menuitem name="Employees"-->
+<!--              id="employee_menu"-->
+<!--              parent="restaurant_top_menu"/>-->
+
+    <menuitem name="Employeestype"
+              id="menu_open_view_food_employeestype_form_tree"
+              action="open_view_food_employeestype_form_tree"
+              parent="restaurant_top_menu"/>
+
+
+</odoo>
