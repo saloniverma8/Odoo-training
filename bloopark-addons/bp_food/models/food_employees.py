@@ -15,6 +15,7 @@ class RestEmployees(models.Model):
     name = fields.Char("Name", required=True)
     emp_address = fields.Char("Address")
     emp_phone = fields.Integer("Employee Phone")
+    # occupation_type = Many2one('food.employeestype', string='Occupation Type')
     occupation_type = fields.Selection([
         ('W', 'W - Waiter'),
         ('A', 'A - Accountant'),
@@ -22,9 +23,3 @@ class RestEmployees(models.Model):
         ('N', 'N - Maintenance'),
         ('C', 'C - Chef')], string='Occupation of the Person in the Restaurant?')
 
-    # occu_type = fields.Many2one(
-    #     "Waiter/Server",
-    #     "Chef",
-    #     "Manager",
-    #     "Admin"
-    # )
