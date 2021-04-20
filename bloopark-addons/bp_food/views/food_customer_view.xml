@@ -71,18 +71,18 @@
               parent="restaurant_top_menu"/>
 
 
-<!--        &lt;!&ndash; Sub Menu &ndash;&gt; &lt;!&ndash; add page here!!!!!!! &ndash;&gt;-->
+        <!-- Sub Menu --> <!-- add page here!!!!!!! -->
 
-<!--        <menuitem name="Customers Data Privacy"-->
-<!--                  id="customer_data_privacy"-->
-<!--                  parent="customer_menu"/>-->
+        <menuitem name="Customers Data Privacy"
+                  id="customer_data_privacy"
+                  parent="customer_menu"/>
 
 
-<!--        &lt;!&ndash; Sub Menu &ndash;&gt;&lt;!&ndash; add page here!!!!! &ndash;&gt;-->
+        <!-- Sub Menu --><!-- add page here!!!!! -->
 
-<!--        <menuitem name="EULA"-->
-<!--                  id="customer_eula"-->
-<!--                  parent="customer_menu"/>-->
+        <menuitem name="EULA"
+                  id="customer_eula"
+                  parent="customer_menu"/>
 
 
 
