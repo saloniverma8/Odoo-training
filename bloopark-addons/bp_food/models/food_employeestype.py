@@ -12,6 +12,7 @@ class EmployeesType(models.Model):
     _description = "describes the different types of jobs a person can have at the restaurant"
 
     occupation = fields.Char(string="Occupation Type Ex. Chef, Waiter", required=True)
+
     comments = fields.Char(string="Add Comments about the job role")
 
 
