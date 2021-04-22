@@ -17,6 +17,7 @@ class DishType(models.Model):
         ('veg', 'Vegetarian'),
         ('nonveg', 'Non-Vegetarian'),
     ])
+    dish_price = fields.Integer("Price of the Dish")
     dish_comments = fields.Char("Add Comments about Dish")
 
 
