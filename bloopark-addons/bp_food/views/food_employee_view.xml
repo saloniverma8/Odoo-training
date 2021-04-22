@@ -3,7 +3,7 @@
 <odoo>
 
 
-    <!-- Customer Data Master -->
+    <!-- Employee Data Master -->
     <!-- Form view of new employee data -->
     <record id="view_food_employees_form" model="ir.ui.view">
         <field name="name">food_employees.form</field>
@@ -25,7 +25,7 @@
         </field>
     </record>
 
-    <!-- Tree view of hotel restaurant tables -->
+    <!-- Tree view of hotel employees -->
     <record id="view_food_employees_tree" model="ir.ui.view">
         <field name="name">food_employees.tree</field>
         <field name="model">food.employees</field>
