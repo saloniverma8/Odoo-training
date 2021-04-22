@@ -49,8 +49,8 @@
     <!-- Action of hotel restaurant tables -->
     <record id="open_view_food_employeestype_form_tree"
             model="ir.actions.act_window">
-        <field name="name">Employee</field>
-        <field name="res_model">food.employees</field>
+        <field name="name">EmployeeType</field>
+        <field name="res_model">food.employeestype</field>
         <field name="view_mode">tree,form</field>
     </record>
 
@@ -65,7 +65,7 @@
 <!--              id="employee_menu"-->
 <!--              parent="restaurant_top_menu"/>-->
 
-    <menuitem name="Employeestype"
+    <menuitem name="Suggest New Employees"
               id="menu_open_view_food_employeestype_form_tree"
               action="open_view_food_employeestype_form_tree"
               parent="restaurant_top_menu"/>
