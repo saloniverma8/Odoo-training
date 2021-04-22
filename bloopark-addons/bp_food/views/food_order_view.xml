@@ -20,12 +20,12 @@
                         <newline/>
                         <field name="order_date"/>
                         <newline/>
-                        <field name="order_customer"/>
-                        <newline/>
-                        <field name="order_dish"/>
-                        <newline/>
-                        <field name="order_server"/>
-                        <newline/>
+                        <!--                        <field name="order_customer"/>-->
+                        <!--                        <newline/>-->
+                        <!--                        <field name="order_dish"/>-->
+                        <!--                        <newline/>-->
+                        <!--                        <field name="order_server"/>-->
+                        <!--                        <newline/>-->
                         <field name="order_amount"/>
                         <newline/>
                         <field name="order_comments"/>
@@ -45,9 +45,9 @@
                 <field name="capacity"/>
                 <field name="order_number"/>
                 <field name="order_date"/>
-                <field name="order_customer"/>
-                <field name="order_dish"/>
-                <field name="order_server"/>
+                <!--                <field name="order_customer"/>-->
+                <!--                <field name="order_dish"/>-->
+                <!--                <field name="order_server"/>-->
                 <field name="order_amount"/>
                 <field name="order_comments"/>
 
@@ -65,9 +65,9 @@
                 <field name="capacity"/>
                 <field name="order_number"/>
                 <field name="order_date"/>
-                <field name="order_customer"/>
-                <field name="order_dish"/>
-                <field name="order_server"/>
+                <!--                <field name="order_customer"/>-->
+                <!--                <field name="order_dish"/>-->
+                <!--                <field name="order_server"/>-->
                 <field name="order_amount"/>
                 <field name="order_comments"/>
                 <newline/>
@@ -83,9 +83,15 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem name="Customers"
-              id="menu_open_view_food_food_customers_form_tree"
-              action="open_view_food_food_customers_form_tree"/>
+    <!-- Parent Menu -->
+    <menuitem name="Restaurant"
+              id="restaurant_top_menu"
+              sequence="0"/>
+
+    <menuitem name="Orders"
+              id="menu_open_view_food_order_customers_form_tree"
+              action="open_view_food_order_customers_form_tree"
+              parent="restaurant_top_menu"/>
 
 
 </odoo>
