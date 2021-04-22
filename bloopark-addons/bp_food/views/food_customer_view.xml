@@ -58,6 +58,14 @@
         <field name="view_mode">tree,form</field>
     </record>
 
+     <!-- Action of data privacy menu -->
+    <record id="open_page_food_customer_dataprivacy"
+            model="ir.actions.act_window">
+        <field name="name">Customers</field>
+        <field name="res_model">bp.food.customers</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
 
 <!-- Parent Menu -->
     <menuitem name="Restaurant"
@@ -77,8 +85,8 @@
 
     <menuitem name="Customers Data Privacy"
               id="customer_data_privacy"
+              action="open_page_food_customer_dataprivacy"
               parent="customer_menu"
-              action="open_view_bp_food_customers_form_tree"
               sequence="3"/>
 
 
@@ -87,7 +95,6 @@
     <menuitem name="EULA"
               id="customer_eula"
               parent="customer_menu"
-              action="open_view_bp_food_customers_form_tree"
               sequence="3"/>
 
 
