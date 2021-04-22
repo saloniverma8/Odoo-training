@@ -12,7 +12,7 @@
             <form string="Customer Order Details">
                 <sheet>
                     <group>
-                        <field name="table"/>
+                        <field name="table" colspan="1"/>
                         <newline/>
                         <field name="capacity"/>
                         <newline/>
