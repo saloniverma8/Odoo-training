@@ -12,9 +12,11 @@
             <form string="Table Details">
                 <sheet>
                     <group>
-                        <field name="table"/>
+                        <field name="table" colspan="1"/>
                         <newline/>
                         <field name="capacity"/>
+                        <newline/>
+                        <field name="status"/>
                     </group>
                 </sheet>
             </form>
@@ -29,6 +31,7 @@
             <tree string="Table Details">
                 <field name="table"/>
                 <field name="capacity"/>
+                <field name="status"/>
             </tree>
         </field>
     </record>
@@ -41,6 +44,7 @@
             <search string="Table Detail">
                 <field name="table"/>
                 <field name="capacity"/>
+                <field name="status"/>
                 <newline/>
             </search>
         </field>
