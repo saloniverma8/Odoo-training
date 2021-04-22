@@ -13,7 +13,7 @@ class FoodOrder(models.Model):
     _name = "food.order"
     _description = "Table Details"
 
-    table = fields.Char("Table Number", required=True, index=True)
+    table = fields.Integer("Table Number", required=True, index=True)
     capacity = fields.Integer("Capacity")
     order_number = fields.Integer("Order #")
     order_date = fields.Date(string='Order Date', required=True)
