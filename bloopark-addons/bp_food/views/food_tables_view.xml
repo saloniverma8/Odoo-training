@@ -3,7 +3,7 @@
 <odoo>
 
 
-    <!-- Customer Data Master -->
+    <!-- tables Data Master -->
     <!-- Form view of new customer data -->
     <record id="view_food_tables_form" model="ir.ui.view">
         <field name="name">food_tables.form</field>
@@ -12,7 +12,7 @@
             <form string="Table Details">
                 <sheet>
                     <group>
-                        <field name="table" colspan="1"/>
+                        <field name="table"/>
                         <newline/>
                         <field name="capacity"/>
                     </group>
