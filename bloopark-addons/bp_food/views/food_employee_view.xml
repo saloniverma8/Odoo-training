@@ -19,6 +19,8 @@
                         <field name="emp_phone"/>
                         <newline/>
                         <field name="occupation_type"/>
+                        <newline/>
+                        <field name="occupation"/>
                     </group>
                 </sheet>
             </form>
@@ -35,6 +37,7 @@
                 <field name="emp_phone"/>
                 <field name="emp_address"/>
                 <field name="occupation_type"/>
+                <field name="occupation"/>
             </tree>
         </field>
     </record>
@@ -49,6 +52,7 @@
                 <field name="emp_phone"/>
                 <field name="emp_address"/>
                 <field name="occupation_type"/>
+                <field name="occupation"/>
                 <newline/>
             </search>
         </field>
