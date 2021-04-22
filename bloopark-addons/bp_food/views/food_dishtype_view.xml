@@ -3,7 +3,7 @@
 <odoo>
 
 
-    <!-- Customer Data Master -->
+    <!-- Dish Data Master -->
     <!-- Form view of new employee data -->
     <record id="view_food_dishtype_form" model="ir.ui.view">
         <field name="name">food_dishtype.form</field>
@@ -12,7 +12,7 @@
             <form string="New Dish Suggestions Form">
                 <sheet>
                     <group>
-                        <field name="newdish"/>
+                        <field name="newdish" colspan="1"/>
                         <newline/>
                         <field name="dish_ingredients"/>
                         <newline/>
@@ -74,7 +74,7 @@
     <!--              parent="restaurant_top_menu"/>-->
 
     <menuitem name="Suggest New Dishes"
-              id="menu_open_view_food_dishtype_form_tree"
+              id="food_dishtype_form_tree"
               action="open_view_food_dishtype_form_tree"
               parent="restaurant_top_menu"/>
 
