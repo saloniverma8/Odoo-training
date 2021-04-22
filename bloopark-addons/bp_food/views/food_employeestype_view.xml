@@ -12,7 +12,7 @@
             <form string="New Employee Suggestions Form">
                 <sheet>
                     <group>
-                        <field name="occupation"/>
+                        <field name="occupation" colspan="1"/>
                         <newline/>
                         <field name="comments"/>
                     </group>
@@ -40,6 +40,7 @@
         <field name="arch" type="xml">
             <search string="New Employee Suggestions Form">
                 <field name="occupation"/>
+                <newline/>
                 <field name="comments"/>
                 <newline/>
             </search>
