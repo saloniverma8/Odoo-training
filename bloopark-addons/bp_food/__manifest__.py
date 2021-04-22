@@ -31,6 +31,7 @@
         'views/food_dishtype_view.xml',
         'views/food_order_view.xml',
         'views/food_tables_view.xml',
+        'views/food_customer_dataprivacy.xml',
     ],
     # only loaded in demonstration mode
     'demo': [],
