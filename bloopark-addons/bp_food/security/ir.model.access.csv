@@ -4,4 +4,6 @@ access_food_employees,access.food.employees.manager,model_food_employees,base.gr
 access_food_employeestype,access.food.employeestype.manager,model_food_employeestype,base.group_user,1,1,1,1
 access_food_dishtype,access.food.dishtype.manager,model_food_dishtype,base.group_user,1,1,1,1
 access_food_order,access.food.order,model_food_order,base.group_user,1,1,1,1
+access_food_tables,access.food.tables,model_food_tables,base.group_user,1,1,1,1
+
 
