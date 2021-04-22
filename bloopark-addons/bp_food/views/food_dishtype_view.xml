@@ -18,6 +18,8 @@
                         <newline/>
                         <field name="dish_type"/>
                         <newline/>
+                        <field name="dish_price"/>
+                        <newline/>
                         <field name="dish_comments"/>
                     </group>
                 </sheet>
@@ -34,6 +36,7 @@
                 <field name="newdish"/>
                 <field name="dish_ingredients"/>
                 <field name="dish_type"/>
+                <field name="dish_price"/>
                 <field name="dish_comments"/>
             </tree>
         </field>
@@ -48,6 +51,7 @@
                 <field name="newdish"/>
                 <field name="dish_ingredients"/>
                 <field name="dish_type"/>
+                <field name="dish_price"/>
                 <field name="dish_comments"/>
                 <newline/>
             </search>
