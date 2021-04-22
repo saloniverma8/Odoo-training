@@ -29,6 +29,7 @@
         'views/food_employee_view.xml',
         'views/food_employeestype_view.xml',
         'views/food_dishtype_view.xml',
+        'views/food_order_view.xml',
         # 'views/food_dish_view.xml',
     ],
     # only loaded in demonstration mode
