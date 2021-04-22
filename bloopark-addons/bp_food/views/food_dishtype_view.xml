@@ -62,16 +62,16 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-      <!-- Parent Menu -->
+    <!-- Parent Menu -->
     <menuitem name="Restaurant"
               id="restaurant_top_menu"
               sequence="0"/>
 
 
-<!--    &lt;!&ndash; Main Menu &ndash;&gt;-->
-<!--    <menuitem name="Employees"-->
-<!--              id="employee_menu"-->
-<!--              parent="restaurant_top_menu"/>-->
+    <!--    &lt;!&ndash; Main Menu &ndash;&gt;-->
+    <!--    <menuitem name="Employees"-->
+    <!--              id="employee_menu"-->
+    <!--              parent="restaurant_top_menu"/>-->
 
     <menuitem name="Suggest New Dishes"
               id="menu_open_view_food_dishtype_form_tree"
