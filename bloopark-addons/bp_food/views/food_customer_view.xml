@@ -58,33 +58,40 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <!-- Parent Menu -->
+
+<!-- Parent Menu -->
     <menuitem name="Restaurant"
               id="restaurant_top_menu"
-              sequence="0"/>
+              sequence="7"/>
 
 
     <!-- Main Menu -->
     <menuitem name="Customers"
               id="customer_menu"
               action="open_view_bp_food_customers_form_tree"
-              parent="restaurant_top_menu"/>
+              parent="restaurant_top_menu"
+              sequence="2"/>
 
 
-        <!-- Sub Menu --> <!-- add page here!!!!!!! -->
+    <!-- Sub Menu --> <!-- add page here!!!!!!! -->
 
-        <menuitem name="Customers Data Privacy"
-                  id="customer_data_privacy"
-                  parent="customer_menu"/>
+    <menuitem name="Customers Data Privacy"
+              id="customer_data_privacy"
+              parent="customer_menu"
+              action="open_view_bp_food_customers_form_tree"
+              sequence="3"/>
 
 
-        <!-- Sub Menu --><!-- add page here!!!!! -->
+    <!-- Sub Menu --><!-- add page here!!!!! -->
 
-        <menuitem name="EULA"
-                  id="customer_eula"
-                  parent="customer_menu"/>
-
+    <menuitem name="EULA"
+              id="customer_eula"
+              parent="customer_menu"
+              action="open_view_bp_food_customers_form_tree"
+              sequence="3"/>
 
 
 
 </odoo>
+
+
