@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<odoo>
+
+
+    <!-- Customer Data Master -->
+    <!-- Form view of new customer data -->
+    <record id="view_bp_food_customers_form" model="ir.ui.view">
+        <field name="name">bp_food_customers.form</field>
+        <field name="model">bp.food.customers</field>
+        <field name="arch" type="xml">
+            <form string="Customer Detail">
+                <sheet>
+                    <group>
+                        <field name="name" colspan="1"/>
+                        <newline/>
+                        <field name="number"/>
+                        <newline/>
+                        <field name="email"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+<!-- Parent Menu -->
+    <menuitem name="Restaurant"
+              id="restaurant_top_menu"
+              sequence="7"/>
+
+
+    <!-- Main Menu -->
+    <menuitem name="Customers"
+              id="customer_menu"
+              action="open_view_bp_food_customers_form_tree"
+              parent="restaurant_top_menu"
+              sequence="2"/>
+
+
+
+
+
+</odoo>
+
+
