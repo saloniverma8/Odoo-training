@@ -9,7 +9,10 @@ class FoodTables(models.Model):
 
     table = fields.Integer("Table Number", required=True, index=True)
     capacity = fields.Integer("Capacity")
-
+    status = fields.Selection(string='Table Status', selection=[
+        ('empty', 'Empty'),
+        ('occupied', 'Occupied'),
+    ])
     # @api.depends('number')
     #
     #
