@@ -18,9 +18,9 @@ class FoodOrder(models.Model):
     order_number = fields.Integer("Order #")
     order_date = fields.Date(string='Order Date', required=True)
     # current_date = fields.Datetime(string='Current Date and Time')
-    order_customer = fields.One2many('bp.food.customers', 'name', string ='Name of Customer')
-    # order_dish = fields.Many2many('food.dish', 'dishes', string='Dish to be Ordered')
-    order_server = fields.One2many('food.employees', 'name', string='Server/Waiter Name')
+    order_customer = fields.Many2one('bp.food.customers', string ='Name of Customer')
+    order_dish = fields.Many2one('food.menu', string='Dish to be Ordered')
+    order_server = fields.Many2one('food.employees', string='Server/Waiter Name')
     order_amount = fields.Integer(string='Bill Total')
     order_comments = fields.Char('Add comments here for customisation or Allergies')
 
