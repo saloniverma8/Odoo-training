@@ -69,7 +69,7 @@
     <!--              id="employee_menu"-->
     <!--              parent="restaurant_top_menu"/>-->
 
-    <menuitem name="Restaurant Menu"
+    <menuitem name="Suggest Menu Dishes"
               id="food_menu_form_tree"
               action="open_view_food_menu_form_tree"
               parent="restaurant_top_menu"/>
