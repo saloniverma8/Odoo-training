@@ -16,7 +16,7 @@ class DishType(models.Model):
     dish_ingredients = fields.Char(string="Specify the Dish Ingredients")
     dish_type = fields.Selection([
         ('veg', 'Vegetarian'),
-        ('nonveg', 'Non-Vegertarian'),
+        ('nonveg', 'Non-Vegetarian'),
         ('mix', 'Mixed')], string='Type of Dish')
     dish_price = fields.Integer(string='Price of the Dish')
     dish_cuisine = fields.Char(string='Cuisine it belongs to')
