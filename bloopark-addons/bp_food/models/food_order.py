@@ -13,15 +13,15 @@ class FoodOrder(models.Model):
     _name = "food.order"
     _description = "Table Details"
 
-    table = fields.Integer("Table Number", required=True, index=True)
+    table = fields.One2many('food.tables', 'table', required=True, index=True)
     capacity = fields.Integer("Capacity")
     order_number = fields.Integer("Order #")
     order_date = fields.Date(string='Order Date', required=True)
     # current_date = fields.Datetime(string='Current Date and Time')
-    # order_customer = fields.One2many('bp.food.customers', 'name', string ='Name of Customer')
+    order_customer = fields.One2many('bp.food.customers', 'name', string ='Name of Customer')
     # order_dish = fields.Many2many('food.dish', 'dishes', string='Dish to be Ordered')
-    # order_server = fields.Many2one('food.employees', 'name', string='Server/Waiter Name')
-    order_amount = fields.Integer(string='Bill Total $30')
+    order_server = fields.One2many('food.employees', 'name', string='Server/Waiter Name')
+    order_amount = fields.Integer(string='Bill Total')
     order_comments = fields.Char('Add comments here for customisation or Allergies')
 
 
@@ -33,3 +33,19 @@ class FoodOrder(models.Model):
 # def _check_order_date(self):
 #     if self.order_date <= self.current_date:
 #         raise ValidationError('End date must be after Start Date')
+
+#
+# table = fields.One2many('food.tables', 'table',
+#                                string='Table No. for Order')
+#     capacity = fields.fields.One2many('food.tables', 'capacity',
+#                                string='table capacity')
+#     order_number = fields.Integer("Order #", required=True, index=True)
+#     order_date = fields.Date(string='Order Date', required=True)
+#     # current_date = fields.Datetime(string='Current Date and Time')
+#     order_customer = fields.One2many('bp.food.customers', 'name',
+#                                string='Name of Customer')
+#     # order_dish = fields.Many2many('food.dish', 'dishes', string='Dish to be Ordered')
+#     order_server = fields.One2many('food.employees', 'name',
+#                                string='Name of Waiter/Server')
+#     order_amount = fields.Integer(string='Bill Total')
+#     order_comments = fields.Char('Add comments here for customisation or Allergies')
