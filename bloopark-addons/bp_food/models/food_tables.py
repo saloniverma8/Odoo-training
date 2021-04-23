@@ -1,3 +1,4 @@
+
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
@@ -7,7 +8,7 @@ class FoodTables(models.Model):
     _name = 'food.tables'
     _description = 'Tables and Capacity in Restaurant'
 
-    table = fields.Many2one('food.order', required=True, index=True)
+    table = fields.Integer(string='Table No.', required=True, index=True)
     capacity = fields.Integer("Capacity")
     status = fields.Selection(string='Table Status', selection=[
         ('empty', 'Empty'),
