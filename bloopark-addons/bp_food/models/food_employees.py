@@ -12,14 +12,15 @@ class RestEmployees(models.Model):
     _name = "food.employees"
     _description = "Employee Details"
 
-    name = fields.Char("Name", required=True)
+    name = fields.Many2one('food.order', string="Server Name", ondelete='cascade')
     emp_address = fields.Char("Address")
     emp_phone = fields.Integer("Employee Phone")
-    # occupation_type = Many2one('food.employeestype', string='Occupation Type')
+    occupation = fields.Many2one('food.employeestype', string='Occupation Type',
+                                    ondelete='set null')
+
     occupation_type = fields.Selection([
         ('W', 'W - Waiter'),
         ('A', 'A - Accountant'),
         ('M', 'M - Manager'),
         ('N', 'N - Maintenance'),
         ('C', 'C - Chef')], string='Occupation of the Person in the Restaurant?')
-

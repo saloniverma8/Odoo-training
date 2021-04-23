@@ -7,7 +7,8 @@ class FoodCustomers(models.Model):
     _name = 'bp.food.customers'
     _description = 'table for customer data'
 
-    name = fields.Char("Customer Name", required=True)
+    name = fields.Many2one('food.order', string="Customer Name", required=True,
+                                ondelete='cascade')
     number = fields.Integer("Phone Number")
     email = fields.Char("Email")
 
