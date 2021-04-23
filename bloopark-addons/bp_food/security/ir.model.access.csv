@@ -5,5 +5,5 @@ access_food_employeestype,access.food.employeestype.manager,model_food_employees
 access_food_dishtype,access.food.dishtype.manager,model_food_dishtype,base.group_user,1,1,1,1
 access_food_order,access.food.order,model_food_order,base.group_user,1,1,1,1
 access_food_tables,access.food.tables,model_food_tables,base.group_user,1,1,1,1
-
+access_food_menu,access.food.menu.manager,model_food_menu,base.group_user,1,1,1,1
 
