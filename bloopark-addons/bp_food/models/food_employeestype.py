@@ -11,10 +11,7 @@ class EmployeesType(models.Model):
     _name = "food.employeestype"
     _description = "describes the different types of jobs a person can have at the restaurant"
 
-    occupation = fields.One2many('food.employees', string="Occupation Type Ex. Chef, Waiter", required=True)
+    # occupation = fields.One2many('food.employees', string="Occupation Type Ex. Chef, Waiter", required=True)
+    occupation = fields.Char(string='New Job')
 
     comments = fields.Char(string="Add Comments about the job role")
-
-
-
-

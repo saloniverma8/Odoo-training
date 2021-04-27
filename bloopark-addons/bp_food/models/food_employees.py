@@ -12,7 +12,7 @@ class RestEmployees(models.Model):
     _name = "food.employees"
     _description = "Employee Details"
 
-    name = fields.Many2one('food.order', string="Server Name", ondelete='cascade')
+    name = fields.Char(string="Server Name", required=True)
     emp_address = fields.Char("Address")
     emp_phone = fields.Integer("Employee Phone")
     occupation = fields.Many2one('food.employeestype', string='Occupation Type',

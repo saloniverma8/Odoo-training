@@ -7,7 +7,7 @@ class FoodTables(models.Model):
     _name = 'food.tables'
     _description = 'Tables and Capacity in Restaurant'
 
-    table = fields.Many2one('food.order', required=True, index=True)
+    table = fields.Integer(string='Table Number', required=True, index=True)
     capacity = fields.Integer("Capacity")
     status = fields.Selection(string='Table Status', selection=[
         ('empty', 'Empty'),
