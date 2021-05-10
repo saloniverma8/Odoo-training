@@ -10,26 +10,46 @@
         <field name="model">food.order</field>
         <field name="arch" type="xml">
             <form string="Customer Order Details">
+
                 <sheet>
-                    <group>
-                        <field name="table" colspan="1"/>
-                        <newline/>
-                        <field name="capacity"/>
-                        <newline/>
-                        <field name="order_number"/>
-                        <newline/>
-                        <field name="order_date"/>
-                        <newline/>
-                        <field name="order_customer"/>
-                        <newline/>
-                        <field name="order_dish"/>
-                        <newline/>
-                        <field name="order_server"/>
-                        <newline/>
-                        <field name="order_amount"/>
-                        <newline/>
-                        <field name="order_comments"/>
-                    </group>
+                    <h3 class="font-weight-bold">
+                        Customer Order Form
+                    </h3>
+                    <div class="oe_title">
+                        <label for="table" class="oe_edit_only"/>
+                        <h1>
+                            <field name="table"/>
+                        </h1>
+                    </div>
+                    <notebook colspan="4">
+                        <page string="Order Details" name="general_info">
+                            <group>
+                                <group>
+                                    <field name="capacity"
+                                           string="Capacity"/>
+                                    <field name="order_number"
+                                           string="Order Number"/>
+                                    <field name="order_date"
+                                           string="Order Date"/>
+                                    <field name="order_customer"
+                                           strig="Order Customer"/>
+                                </group>
+                            </group>
+                        </page>
+
+                        <page string="Order Details" name="new_dish">
+                            <group>
+                                    <field name="order_dish"/>
+                                    <field name="order_server"/>
+                                </group>
+                        </page>
+                        <page string="Bill and Details" name="new_dish">
+                            <group>
+                                    <field name="order_amount"/>
+                                    <field name="order_comments"/>
+                                </group>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
