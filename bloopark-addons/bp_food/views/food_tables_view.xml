@@ -23,6 +23,47 @@
         </field>
     </record>
 
+    <!--kanban View of Course-->
+    <record id="view_food_table_kanban" model="ir.ui.view">
+        <field name="name">food_tables.kanban</field>
+        <field name="model">food.tables</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="id"/>
+                <field name="table"/>
+                <field name="capacity"/>
+                <field name="status"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div class="o_kanban_image">
+                                <img alt=""
+                                     t-att-src="kanban_image('food.tables', 'image_small', record.id.raw_value)"/>
+                            </div>
+                            <div class="oe_kanban_details">
+                                <ul>
+                                    <li>
+                                        Table:
+                                        <field name="table"></field>
+                                    </li>
+                                    <li>
+                                        Price:
+                                        <field name="capacity"></field>
+                                    </li>
+                                    <li>
+                                        Category:
+                                        <field name="status"></field>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
     <!-- Tree view of hotel restaurant tables -->
     <record id="view_food_tables_tree" model="ir.ui.view">
         <field name="name">food_tables.tree</field>
@@ -55,7 +96,7 @@
             model="ir.actions.act_window">
         <field name="name">Tables</field>
         <field name="res_model">food.tables</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">kanban,tree,form</field>
     </record>
 
     <!-- Parent Menu -->
