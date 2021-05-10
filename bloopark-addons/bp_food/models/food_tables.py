@@ -12,19 +12,24 @@ class FoodTables(models.Model):
     status = fields.Selection(string='Table Status', selection=[
         ('empty', 'Empty'),
         ('occupied', 'Occupied'),
+        ('reserved', 'Reserved'),
+        ('dirty', 'Dirty'),
     ])
-    # @api.depends('number')
-    #
-    #
-    # def _value_pc(self):
-    #     for record in self:
-    #         record.value2 = float(record.value) / 100
-    #
-    #         #function for saving values in DB
+    color = fields.Integer('Color Index', compute="change_colore_on_kanban")
+
+    def change_colore_on_kanban(self):
+         for record in self:
+            color = 0
+            if record.status == 'occupied':
+                color = 2
+            elif record.status == 'empty':
+                color = 5
+            elif record.cleaning_status == 'dirty':
+                color = 7
+            elif record.cleaning_status == 'reserved':
+                color = 5
+            else:
+                color = 5
+            record.color = color
 
 
-# @api.constrains('number')
-# def check_number(self):
-#     for rec in self:
-#         if len(rec.number)<12:
-#             raise ValidationError('Mobile Number incorrect. More number of expected fields')

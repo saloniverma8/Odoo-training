@@ -17,6 +17,8 @@
                         <field name="capacity"/>
                         <newline/>
                         <field name="status"/>
+                        <newline/>
+                        <field name="color"/>
                     </group>
                 </sheet>
             </form>
@@ -69,10 +71,12 @@
         <field name="name">food_tables.tree</field>
         <field name="model">food.tables</field>
         <field name="arch" type="xml">
-            <tree string="Table Details">
+                <tree string="Table Details">
+<!--                              colors="blue:status == 'reserved';green:status == 'empty'">-->
                 <field name="table"/>
                 <field name="capacity"/>
                 <field name="status"/>
+                <field name="color"/>
             </tree>
         </field>
     </record>
