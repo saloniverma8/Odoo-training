@@ -7,9 +7,9 @@
         <field name="priority" eval="1"/>
         <field name="arch" type="xml">
             <tree string="calendars list">
-                <field name="start_time"/>
-                <field name="duration"/>
-                <field name="location"/>
+                <field name="server"/>
+                <field name="table"/>
+                <field name="customer"/>
             </tree>
         </field>
     </record>
@@ -22,8 +22,9 @@
         <field name="arch" type="xml">
             <calendar string="calendar Calender" mode="month" quick_add="False"
                       date_start="start_time" date_stop="end_time">
-                <field name="duration"/>
-                <field name="location"/>
+                <field name="server"/>
+                <field name="table"/>
+                <field name="customer"/>
             </calendar>
         </field>
     </record>

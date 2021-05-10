@@ -12,7 +12,9 @@ class Calendar(models.Model):
                                , default=datetime.now())
     duration = fields.Char(compute='_calendar_duration',
                            string='Duration of calendar', required=True)
-    location = fields.Char('Class-Room', required=True, size=10)
+    server = fields.Many2one('food.employees', string='Server/Waiter Name')
+    table = fields.Many2one('food.tables', 'Table No.')
+    customer = fields.Many2one('bp.food.customers', string='Name of Customer')
 
 
     @api.depends('start_time', 'end_time')
