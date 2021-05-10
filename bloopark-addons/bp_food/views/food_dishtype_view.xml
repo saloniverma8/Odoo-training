@@ -3,6 +3,7 @@
 <odoo>
 
 
+
     <!-- Dish Data Master -->
     <!-- Form view of new employee data -->
     <record id="view_food_dishtype_form" model="ir.ui.view">
@@ -10,20 +11,40 @@
         <field name="model">food.dishtype</field>
         <field name="arch" type="xml">
             <form string="New Dish Suggestions Form">
+
                 <sheet>
-                    <group>
-                        <field name="dishname" colspan="1"/>
-                        <newline/>
-                        <field name="dish_ingredients"/>
-                        <newline/>
-                        <field name="dish_type"/>
-                        <newline/>
-                        <field name="dish_price"/>
-                        <newline/>
-                        <field name="dish_cuisine"/>
-                        <newline/>
-                        <field name="dish_comments"/>
-                    </group>
+                    <h3 class="font-weight-bold">
+                        New Dish Suggestions
+                    </h3>
+                    <div class="oe_title">
+                        <label for="dishname" class="oe_edit_only"/>
+                        <h1>
+                            <field name="dishname"/>
+                        </h1>
+                    </div>
+                    <notebook colspan="4">
+                        <page string="New Dishes" name="general_info">
+                            <group>
+                                <group>
+                                    <field name="dish_type"
+                                           string="Dish Type"/>
+                                    <field name="dish_ingredients"
+                                           string="Dish Ingredients"/>
+                                    <field name="dish_type"
+                                               placeholder="Dish Type.."/>
+                                    <field name="dish_price"
+                                               placeholder="Dish Price.."/>
+                                </group>
+                            </group>
+                        </page>
+
+                        <page string="Dish Details" name="new_dish">
+                            <group>
+                                    <field name="dish_cuisine"/>
+                                    <field name="dish_comments"/>
+                                </group>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>

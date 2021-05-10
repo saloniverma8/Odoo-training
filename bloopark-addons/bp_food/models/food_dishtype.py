@@ -21,3 +21,17 @@ class DishType(models.Model):
     dish_price = fields.Integer(string='Price of the Dish')
     dish_cuisine = fields.Char(string='Cuisine it belongs to')
     dish_comments = fields.Char(string='Add Comments about Dish')
+    status = fields.Selection(string='Status', selection=[
+        ('open', 'Open'),
+        ('inprogress', 'In Progress'),
+        ('finished', 'Finished'),
+    ], default='open', required=True)
+
+
+    def dish_final(self):
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Menu Details and Dishes',
+            'view_mode': 'tree',
+            'res_model': 'food.menu',
+        }
