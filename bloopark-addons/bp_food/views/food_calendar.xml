@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--list view of calendars-->
+    <record id="calendar_list_view" model="ir.ui.view">
+        <field name="name">food_calendar.list.view</field>
+        <field name="model">food.calendar</field>
+        <field name="priority" eval="1"/>
+        <field name="arch" type="xml">
+            <tree string="calendars list">
+                <field name="start_time"/>
+                <field name="duration"/>
+                <field name="location"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--Calender view of calendars-->
+    <record id="calendar_calendar_view" model="ir.ui.view">
+        <field name="name">food_calendar.calendar.view</field>
+        <field name="model">food.calendar</field>
+        <field name="priority" eval="1"/>
+        <field name="arch" type="xml">
+            <calendar string="calendar Calender" mode="month" quick_add="False"
+                      date_start="start_time" date_stop="end_time">
+                <field name="duration"/>
+                <field name="location"/>
+            </calendar>
+        </field>
+    </record>
+
+    <!--action of the calendar-->
+    <record id="action_calendar" model="ir.actions.act_window">
+        <field name="name">calendar</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">food.calendar</field>
+        <field name="view_mode">calendar,tree,form</field>
+    </record>
+
+   
+    <!--parent menu-->
+    <menuitem name="Restaurant"
+              id="restaurant_top_menu"
+              sequence="7"/>
+
+    <!--submenu-->
+    <menuitem id="table_calendar"
+              name="Calendar"
+              parent="restaurant_top_menu"
+              action="action_calendar"/>
+</odoo>

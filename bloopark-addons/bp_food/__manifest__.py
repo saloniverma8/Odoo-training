@@ -33,6 +33,7 @@
         'views/food_dishtype_view.xml',
         'views/food_employeestype_view.xml',
         'views/food_customer_dataprivacy.xml',
+        'views/food_calendar.xml',
 
     ],
     # only loaded in demonstration mode
