@@ -13,7 +13,7 @@
                         </tr>
                         <tr>
                             <td>
-                                Name:
+                                Customer Name:
                             </td>
                             <td>
                                 <t t-esc="doc.name"/>
@@ -21,18 +21,18 @@
                         </tr>
                         <tr>
                             <td>
-                                Course_offered:
+                                Bill Due:
                             </td>
                             <td>
-                                <t t-esc="doc.course_ids.mapped('name')"/>
+                                <t t-esc="doc.order.mapped('name')"/>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Schedule:
+                                dishes:
                             </td>
                             <td>
-                                <t t-esc="doc.course_ids.mapped('schedule')"/>
+                                <t t-esc="doc.order.mapped('dishes')"/>
                             </td>
                         </tr>
                     </table>

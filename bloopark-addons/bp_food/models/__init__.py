@@ -7,4 +7,4 @@ from . import food_order
 from . import food_tables
 from . import food_dishtype
 from . import food_employeestype
-from . import food_calendar
+# from . import food_calendar

@@ -3,7 +3,7 @@
     <!--list view of calendars-->
     <record id="calendar_list_view" model="ir.ui.view">
         <field name="name">food_calendar.list.view</field>
-        <field name="model">food.calendar</field>
+        <field name="model">food.tables</field>
         <field name="priority" eval="1"/>
         <field name="arch" type="xml">
             <tree string="calendars list">
@@ -17,7 +17,7 @@
     <!--Calender view of calendars-->
     <record id="calendar_calendar_view" model="ir.ui.view">
         <field name="name">food_calendar.calendar.view</field>
-        <field name="model">food.calendar</field>
+        <field name="model">food.tables</field>
         <field name="priority" eval="1"/>
         <field name="arch" type="xml">
             <calendar string="calendar Calender" mode="month" quick_add="False"
@@ -33,7 +33,7 @@
     <record id="action_calendar" model="ir.actions.act_window">
         <field name="name">calendar</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="res_model">food.calendar</field>
+        <field name="res_model">food.tables</field>
         <field name="view_mode">calendar,tree,form</field>
     </record>
 
