@@ -41,12 +41,18 @@ class FoodTables(models.Model):
                 color = 2
             elif record.status == 'empty':
                 color = 5
-            elif record.cleaning_status == 'dirty':
+            elif record.status == 'reserved':
                 color = 7
-            elif record.cleaning_status == 'reserved':
-                color = 5
             else:
                 color = 5
             record.color = color
 
 
+#
+# add check for capacity
+#     add check for allowing to sit only on tables that are empty
+# when the time is over, set status of table back to empty and available and green
+# do not set capacity more than 10 for a table
+# do not allow table numbers more than number #10 jiske liye index fix karna padega
+# do not allow previous date reservations
+# do not allow reservations before today's date and time

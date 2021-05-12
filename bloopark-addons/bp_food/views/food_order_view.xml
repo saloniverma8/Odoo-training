@@ -100,7 +100,7 @@
             model="ir.actions.act_window">
         <field name="name">Order</field>
         <field name="res_model">food.order</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">kanban,tree,form</field>
     </record>
 
     <!-- Parent Menu -->

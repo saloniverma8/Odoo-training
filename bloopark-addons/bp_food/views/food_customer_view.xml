@@ -59,7 +59,7 @@
     </record>
 
      <!-- Action of data privacy menu -->
-    <record id="open_page_food_customer_dataprivacy"
+    <record id="open_page_food_customer_data"
             model="ir.actions.act_window">
         <field name="name">Customers</field>
         <field name="res_model">bp.food.customers</field>
@@ -83,9 +83,9 @@
 
     <!-- Sub Menu --> <!-- add page here!!!!!!! -->
 
-    <menuitem name="Customers Data Privacy"
+    <menuitem name="Customers Data"
               id="customer_data_privacy"
-              action="open_page_food_customer_dataprivacy"
+              action="open_page_food_customer_data"
               parent="customer_menu"
               sequence="3"/>
 

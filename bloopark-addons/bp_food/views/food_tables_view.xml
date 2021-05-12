@@ -53,8 +53,20 @@
                                         <field name="capacity"></field>
                                     </li>
                                     <li>
-                                        Category:
+                                        Status:
                                         <field name="status"></field>
+                                    </li>
+                                    <li>
+                                        Server:
+                                        <field name="server"></field>
+                                    </li>
+                                    <li>
+                                        Customer:
+                                        <field name="customer"></field>
+                                    </li>
+                                    <li>
+                                        Next Available at:
+                                        <field name="end_time"></field>
                                     </li>
                                 </ul>
                             </div>
