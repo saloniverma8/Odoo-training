@@ -12,7 +12,7 @@
             <form string="Table Details">
                 <sheet>
                     <group>
-                        <field name="table" colspan="1"/>
+                        <field name="name" colspan="1"/>
                         <newline/>
                         <field name="capacity"/>
                         <newline/>
@@ -25,14 +25,14 @@
         </field>
     </record>
 
-    <!--kanban View of Course-->
+    <!--kanban View of table-->
     <record id="view_food_table_kanban" model="ir.ui.view">
         <field name="name">food_tables.kanban</field>
         <field name="model">food.tables</field>
         <field name="arch" type="xml">
             <kanban>
                 <field name="id"/>
-                <field name="table"/>
+                <field name="name"/>
                 <field name="capacity"/>
                 <field name="status"/>
                 <templates>
@@ -46,7 +46,7 @@
                                 <ul>
                                     <li>
                                         Table:
-                                        <field name="table"></field>
+                                        <field name="name"></field>
                                     </li>
                                     <li>
                                         Price:
@@ -85,7 +85,7 @@
         <field name="arch" type="xml">
                 <tree string="Table Details">
 <!--                              colors="blue:status == 'reserved';green:status == 'empty'">-->
-                <field name="table"/>
+                <field name="name"/>
                 <field name="capacity"/>
                 <field name="status"/>
                 <field name="color"/>
@@ -99,7 +99,7 @@
         <field name="model">food.tables</field>
         <field name="arch" type="xml">
             <search string="Table Detail">
-                <field name="table"/>
+                <field name="name"/>
                 <field name="capacity"/>
                 <field name="status"/>
                 <newline/>

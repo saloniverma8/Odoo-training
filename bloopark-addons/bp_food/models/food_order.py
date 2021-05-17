@@ -14,6 +14,7 @@ class FoodOrder(models.Model):
     _description = "Table Details"
 
     # table = fields.One2many('food.tables', 'table', required=True, index=True)
+    name = fields.Integer(required=True, index=True, string='Order No. ')
     table = fields.Many2one('food.tables', 'Table No.', required=True)
     capacity = fields.Integer("Capacity")
     order_number = fields.Integer("Order #")

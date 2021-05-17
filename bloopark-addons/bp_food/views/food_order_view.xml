@@ -16,17 +16,17 @@
                         Customer Order Form
                     </h3>
                     <div class="oe_title">
-                        <label for="table" class="oe_edit_only"/>
+                        <label for="name" class="oe_edit_only"/>
                         <h1>
-                            <field name="table"/>
+                            <field name="name"/>
                         </h1>
                     </div>
                     <notebook colspan="4">
                         <page string="Order Details" name="general_info">
                             <group>
                                 <group>
-                                    <field name="capacity"
-                                           string="Capacity"/>
+                                    <field name="table"
+                                           string="Table No."/>
                                     <field name="order_number"
                                            string="Order Number"/>
                                     <field name="order_date"
@@ -61,8 +61,8 @@
         <field name="model">food.order</field>
         <field name="arch" type="xml">
             <tree string="Order Summary">
+                <field name="name"/>
                 <field name="table"/>
-                <field name="capacity"/>
                 <field name="order_number"/>
                 <field name="order_date"/>
                 <field name="order_customer"/>
@@ -81,8 +81,8 @@
         <field name="model">food.order</field>
         <field name="arch" type="xml">
             <search string="Customer Detail">
+                <field name="name"/>
                 <field name="table"/>
-                <field name="capacity"/>
                 <field name="order_number"/>
                 <field name="order_date"/>
                 <field name="order_customer"/>
@@ -100,7 +100,7 @@
             model="ir.actions.act_window">
         <field name="name">Order</field>
         <field name="res_model">food.order</field>
-        <field name="view_mode">kanban,tree,form</field>
+        <field name="view_mode">tree,form,kanban</field>
     </record>
 
     <!-- Parent Menu -->

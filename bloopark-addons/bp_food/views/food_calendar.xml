@@ -8,7 +8,7 @@
         <field name="arch" type="xml">
             <tree string="calendars list">
                 <field name="server"/>
-                <field name="table"/>
+                <field name="name"/>
                 <field name="capacity"/>
                 <field name="customer"/>
                 <field name="start_time"/>
@@ -26,7 +26,7 @@
             <calendar string="calendar Calender" mode="month" quick_add="False"
                       date_start="start_time" date_stop="end_time">
                 <field name="server"/>
-                <field name="table"/>
+                <field name="name"/>
                 <field name="capacity"/>
                 <field name="customer"/>
                 <field name="start_time"/>
@@ -43,7 +43,7 @@
             <form string="Table Details">
                 <sheet>
                     <group>
-                        <field name="table" colspan="1"/>
+                        <field name="name" colspan="1"/>
                         <newline/>
                         <field name="capacity"/>
                         <newline/>
