@@ -12,7 +12,7 @@
                 <form string="Employee Detail">
                     <sheet>
                         <group>
-                            <field name="ename" colspan="1"/>
+                            <field name="name" colspan="1"/>
                             <newline/>
                             <field name="emp_address"/>
                             <newline/>
@@ -22,7 +22,7 @@
                             <newline/>
                             <field name="active"/>
 <!--                            <newline/>-->
-<!--                            <field name="company_id"/>-->
+                            <field name="company_id"/>
                         </group>
                     </sheet>
                 </form>
@@ -44,12 +44,12 @@
             <field name="model">food.employees</field>
             <field name="arch" type="xml">
                 <tree string="Employee Details">
-                    <field name="ename"/>
+                    <field name="name"/>
                     <field name="emp_phone"/>
                     <field name="emp_address"/>
                     <field name="occupation"/>
                     <field name="active"/>
-<!--                    <field name="company_id"/>-->
+                    <field name="company_id"/>
                 </tree>
             </field>
         </record>
@@ -60,13 +60,13 @@
                 <field name="model">food.employees</field>
                 <field name="arch" type="xml">
                     <search string="Employee Detail">
-                        <field name="ename"/>
+                        <field name="name"/>
                         <field name="emp_phone"/>
                         <field name="emp_address"/>
                         <field name="occupation"/>
                         <field name="occupation"/>
                         <field name="active"/>
-<!--                        <field name="company_id"/>-->
+                        <field name="company_id"/>
                         <newline/>
                     </search>
                 </field>

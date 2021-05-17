@@ -70,7 +70,7 @@
 <!--              id="employee_menu"-->
 <!--              parent="restaurant_top_menu"/>-->
 
-    <menuitem name="Add New Employees"
+    <menuitem name="Suggest New Employees"
               id="menu_open_view_food_employeestype_form_tree"
               action="open_view_food_employeestype_form_tree"
               parent="restaurant_top_menu"/>
