@@ -21,14 +21,15 @@ class FoodOrder(models.Model):
     # current_date = fields.Datetime(string='Current Date and Time')
     order_customer = fields.Many2one('bp.food.customers', string='Name of Customer')
     order_dish = fields.Many2one('food.dishtype', string='Dish to be Ordered')
+    # sale_order_ids = fields.One2many('sale.order', 'sale_id',
+    #                                  string='Food Sales')
+    # sales_count = fields.Integer(compute='_compute_sales_course')
     order_server = fields.Many2one('food.employees', string='Server/Waiter Name')
     order_amount = fields.Integer(string='Bill Total')
     order_comments = fields.Char('Add comments here for customisation or Allergies')
 
 
 @api.constrains('order_date')
-
-
 def _check_order_date(self):
     if self.order_date <= datetime.now():
         raise ValidationError('Start date must be after today.')

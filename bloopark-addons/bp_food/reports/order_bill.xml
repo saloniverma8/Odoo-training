@@ -8,11 +8,6 @@
                     <table>
                         <tr>
                             <td>
-                                <img t-att-src="'data:image/png;base64,%s' % to_text(doc.image_128)"/>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
                                 Customer Name:
                             </td>
                             <td>
