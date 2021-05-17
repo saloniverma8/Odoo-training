@@ -20,12 +20,7 @@ class RestEmployees(models.Model):
                                     ondelete='set null')
 
 
-    occupation_type = fields.Selection([
-        ('W', 'W - Waiter'),
-        ('A', 'A - Accountant'),
-        ('M', 'M - Manager'),
-        ('N', 'N - Maintenance'),
-        ('C', 'C - Chef')], string='Occupation of the Person in the Restaurant?')
+
 
     category_ids = fields.Many2many(
         'hr.employee.category', 'student_category_rel',

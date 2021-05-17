@@ -12,9 +12,10 @@
             <form string="New Employee Suggestions Form">
                 <sheet>
                     <group>
-                        <field name="occupation" colspan="1"/>
+                        <field name="name" colspan="1"/>
                         <newline/>
                         <field name="comments"/>
+                        <field name="occupation_type"/>
                     </group>
                 </sheet>
             </form>
@@ -27,8 +28,9 @@
         <field name="model">food.employeestype</field>
         <field name="arch" type="xml">
             <tree string="New Employee Suggestions Form">
-                <field name="occupation"/>
+                <field name="name"/>
                 <field name="comments"/>
+                <field name="occupation_type"/>
             </tree>
         </field>
     </record>
@@ -39,10 +41,12 @@
         <field name="model">food.employeestype</field>
         <field name="arch" type="xml">
             <search string="New Employee Suggestions Form">
-                <field name="occupation"/>
+                <field name="name"/>
                 <newline/>
                 <field name="comments"/>
                 <newline/>
+                <newline/>
+                <field name="occupation_type"/>
             </search>
         </field>
     </record>
@@ -52,7 +56,7 @@
             model="ir.actions.act_window">
         <field name="name">EmployeeType</field>
         <field name="res_model">food.employeestype</field>
-        <field name="view_mode">kanban,tree,form</field>
+        <field name="view_mode">tree,form,kanban</field>
     </record>
 
       <!-- Parent Menu -->
