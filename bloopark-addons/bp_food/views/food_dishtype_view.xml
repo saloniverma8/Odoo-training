@@ -17,9 +17,9 @@
                         New Dish Suggestions
                     </h3>
                     <div class="oe_title">
-                        <label for="dishname" class="oe_edit_only"/>
+                        <label for="name" class="oe_edit_only"/>
                         <h1>
-                            <field name="dishname"/>
+                            <field name="name"/>
                         </h1>
                     </div>
                     <notebook colspan="4">
@@ -56,7 +56,7 @@
         <field name="model">food.dishtype</field>
         <field name="arch" type="xml">
             <tree string="New Dish Suggestions Form">
-                <field name="dishname"/>
+                <field name="name"/>
                 <field name="dish_ingredients"/>
                 <field name="dish_type"/>
                 <field name="dish_price"/>
@@ -72,7 +72,7 @@
         <field name="model">food.dishtype</field>
         <field name="arch" type="xml">
             <search string="New Dish Suggestions Form">
-                <field name="dishname"/>
+                <field name="name"/>
                 <field name="dish_ingredients"/>
                 <field name="dish_type"/>
                 <field name="dish_price"/>
