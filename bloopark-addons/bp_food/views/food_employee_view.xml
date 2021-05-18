@@ -3,98 +3,114 @@
 <odoo>
     <data>
 
-        <!-- Employee Data Master -->
-        <!--     Form view of new employee data -->
-        <record id="view_food_employees_form" model="ir.ui.view">
-            <field name="name">food_employees.form</field>
-            <field name="model">food.employees</field>
-            <field name="arch" type="xml">
-                <form string="Employee Detail">
-                    <sheet>
-                        <group>
-                            <field name="name" colspan="1"/>
-                            <newline/>
-                            <field name="emp_address"/>
-                            <newline/>
-                            <field name="emp_phone"/>
-                            <newline/>
-                            <field name="occupation"/>
-                            <newline/>
-                            <field name="active"/>
-<!--                            <newline/>-->
-                            <field name="company_id"/>
-                        </group>
-                    </sheet>
-                </form>
-            </field>
-        </record>
 
-        <!-- Tree view of hotel employees -->
-        <!--        <record id="view_food_employees_tree" model="ir.ui.view">-->
-        <!--            <field name="name">hr.employees.tree</field>-->
-        <!--            <field name="model">hr.employee</field>-->
-        <!--            <field name="inherit_id" ref="hr.view_employee_tree"/>-->
+        <!--        <record id="view_food_employees_form" model="ir.ui.view">-->
+        <!--            <field name="name">food_employees.form</field>-->
+        <!--            <field name="model">food.employees</field>-->
         <!--            <field name="arch" type="xml">-->
+        <!--                <form string="Employee Detail">-->
+        <!--                    <sheet>-->
+        <!--                        <group>-->
+        <!--                            <field name="name" colspan="1"/>-->
+        <!--                            <newline/>-->
+        <!--                            <field name="emp_address"/>-->
+        <!--                            <newline/>-->
+        <!--                            <field name="emp_phone"/>-->
+        <!--                            <newline/>-->
+        <!--                            <field name="occupation"/>-->
+        <!--                            <newline/>-->
+        <!--                            <field name="active"/>-->
+        <!--&lt;!&ndash;                            <newline/>&ndash;&gt;-->
+        <!--                            <field name="company_id"/>-->
+        <!--                        </group>-->
+        <!--                    </sheet>-->
+        <!--                </form>-->
         <!--            </field>-->
         <!--        </record>-->
 
-
-        <record id="view_food_employees_tree" model="ir.ui.view">
-            <field name="name">food_employees.tree</field>
-            <field name="model">food.employees</field>
+        <!-- Employee Data Master -->
+        <!--     Form view of new employee data -->
+        <record id="view_food_employees_form" model="ir.ui.view">
+            <field name="name">hr.employee.form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
             <field name="arch" type="xml">
-                <tree string="Employee Details">
-                    <field name="name"/>
-                    <field name="emp_phone"/>
-                    <field name="emp_address"/>
-                    <field name="occupation"/>
-                    <field name="active"/>
-                    <field name="company_id"/>
-                </tree>
+                <field name="name" position="after">
+                   <field name="occupation" select="0"/>
+        </field>
             </field>
         </record>
 
-<!--         Search view of hotel restaurant tables-->
-            <record id="view_food_employees_search" model="ir.ui.view">
-                <field name="name">food_employees.search</field>
-                <field name="model">food.employees</field>
-                <field name="arch" type="xml">
-                    <search string="Employee Detail">
-                        <field name="name"/>
-                        <field name="emp_phone"/>
-                        <field name="emp_address"/>
-                        <field name="occupation"/>
-                        <field name="occupation"/>
-                        <field name="active"/>
-                        <field name="company_id"/>
-                        <newline/>
-                    </search>
+        <!--         Tree view of hotel employees -->
+        <record id="view_food_employees_tree" model="ir.ui.view">
+            <field name="name">hr.employees.tree</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_tree"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="occupation" select="0"/>
                 </field>
-            </record>
 
-        <!-- Action of hotel restaurant tables -->
-        <record id="open_view_food_employees_form_tree"
-                model="ir.actions.act_window">
-            <field name="name">Employee</field>
-            <field name="res_model">food.employees</field>
-            <field name="view_mode">tree,form,kanban</field>
+            </field>
         </record>
 
-        <!-- Parent Menu -->
-        <menuitem name="Restaurant"
-                  id="restaurant_top_menu"
-                  sequence="0"/>
+
+        <!--        <record id="view_food_employees_tree" model="ir.ui.view">-->
+        <!--            <field name="name">food_employees.tree</field>-->
+        <!--            <field name="model">food.employees</field>-->
+        <!--            <field name="arch" type="xml">-->
+        <!--                <tree string="Employee Details">-->
+        <!--                    <field name="name"/>-->
+        <!--                    <field name="emp_phone"/>-->
+        <!--                    <field name="emp_address"/>-->
+        <!--                    <field name="occupation"/>-->
+        <!--                    <field name="active"/>-->
+        <!--                    <field name="company_id"/>-->
+        <!--                </tree>-->
+        <!--            </field>-->
+        <!--        </record>-->
+
+        <!--&lt;!&ndash;         Search view of hotel restaurant tables&ndash;&gt;-->
+        <!--            <record id="view_food_employees_search" model="ir.ui.view">-->
+        <!--                <field name="name">food_employees.search</field>-->
+        <!--                <field name="model">food.employees</field>-->
+        <!--                <field name="arch" type="xml">-->
+        <!--                    <search string="Employee Detail">-->
+        <!--                        <field name="name"/>-->
+        <!--                        <field name="emp_phone"/>-->
+        <!--                        <field name="emp_address"/>-->
+        <!--                        <field name="occupation"/>-->
+        <!--                        <field name="occupation"/>-->
+        <!--                        <field name="active"/>-->
+        <!--                        <field name="company_id"/>-->
+        <!--                        <newline/>-->
+        <!--                    </search>-->
+        <!--                </field>-->
+        <!--            </record>-->
+
+        <!--        &lt;!&ndash; Action of hotel restaurant tables &ndash;&gt;-->
+        <!--        <record id="open_view_food_employees_form_tree"-->
+        <!--                model="ir.actions.act_window">-->
+        <!--            <field name="name">Employee</field>-->
+        <!--            <field name="res_model">food.employees</field>-->
+        <!--            <field name="view_mode">tree,form,kanban</field>-->
+        <!--        </record>-->
+
+        <!--        &lt;!&ndash; Parent Menu &ndash;&gt;-->
+        <!--        <menuitem name="Restaurant"-->
+        <!--                  id="restaurant_top_menu"-->
+        <!--                  sequence="0"/>-->
 
 
-        <!--    &lt;!&ndash; Main Menu &ndash;&gt;-->
-        <!--    <menuitem name="Employees"-->
-        <!--              id="employee_menu"-->
-        <!--              parent="restaurant_top_menu"/>-->
+        <!--        &lt;!&ndash;    &lt;!&ndash; Main Menu &ndash;&gt;&ndash;&gt;-->
+        <!--        &lt;!&ndash;    <menuitem name="Employees"&ndash;&gt;-->
+        <!--        &lt;!&ndash;              id="employee_menu"&ndash;&gt;-->
+        <!--        &lt;!&ndash;              parent="restaurant_top_menu"/>&ndash;&gt;-->
 
-        <menuitem name="Employees"
-                  id="menu_open_view_food_employees_form_tree"
-                  action="open_view_food_employees_form_tree"
-                  parent="restaurant_top_menu"/>
+        <!--        <menuitem name="Employees"-->
+        <!--                  id="menu_open_view_food_employees_form_tree"-->
+        <!--                  action="open_view_food_employees_form_tree"-->
+        <!--                  parent="restaurant_top_menu"/>-->
 
     </data>
 </odoo>

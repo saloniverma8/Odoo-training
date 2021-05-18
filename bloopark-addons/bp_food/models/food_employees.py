@@ -8,10 +8,10 @@ from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
 from odoo import models, fields, api
 
 
-class RestEmployees(models.Model):
-    _name = "food.employees"
-    _description = "Employee Details"
+class HrEmployee(models.Model):
     _inherit = 'hr.employee'
+    _description = "Employee Details"
+
 
     ename = fields.Char(string="Name", required=True)
     emp_address = fields.Char("Address")
