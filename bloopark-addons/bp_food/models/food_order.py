@@ -29,8 +29,3 @@ class FoodOrder(models.Model):
     order_amount = fields.Integer(string='Bill Total')
     order_comments = fields.Char('Add comments here for customisation or Allergies')
 
-
-# @api.constrains('order_date')
-# def _check_order_date(self):
-#     if self.order_date <= datetime.now():
-#         raise ValidationError('Start date must be after today.')

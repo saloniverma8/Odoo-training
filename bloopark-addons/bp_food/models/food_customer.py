@@ -16,9 +16,9 @@ class ResPartner(models.Model):
         ('n', 'Non-Vegetarian'),
     ], string='Veg/Non-Veg')
 
-    # frequency = fields.Selection([
-    #     ('f', 'Frequent'),
-    #     ('i', 'Intermediate'),
-    #     ('r', 'Rare'),
-    #     ('t', 'First Time'),
-    #     ], string='Frequency')
+    frequency = fields.Selection([
+        ('f', 'Frequent'),
+        ('i', 'Intermediate'),
+        ('r', 'Rare'),
+        ('t', 'First Time'),
+        ], string='Frequency')
