@@ -14,7 +14,7 @@ class Calendar(models.Model):
                            string='Duration of calendar', required=True)
     server = fields.Many2one('food.employees', string='Server/Waiter Name')
     table = fields.Many2one('food.tables', 'Table No.')
-    customer = fields.Many2one('bp.food.customers', string='Name of Customer')
+    customer = fields.Many2one('res.partner', string='Name of Customer')
 
 
     @api.depends('start_time', 'end_time')

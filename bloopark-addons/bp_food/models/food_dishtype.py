@@ -12,7 +12,7 @@ class DishType(models.Model):
     _name = "food.dishtype"
     _description = "describes the different types of dishes that can be added"
 
-    name = fields.Char(string="New Dish Name", required=True)
+    name = fields.Char(string="New Dish Name")
     dish_ingredients = fields.Char(string="Specify the Dish Ingredients")
     dish_type = fields.Selection([
         ('veg', 'Vegetarian'),

@@ -12,8 +12,7 @@ class HrEmployee(models.Model):
     _inherit = 'hr.employee'
     _description = "Employee Details"
 
-
-    ename = fields.Char(string="Name", required=True)
+    ename = fields.Char(string="Name")
     emp_address = fields.Char("Address")
     emp_phone = fields.Integer("Employee Phone")
     occupation = fields.Many2one('food.employeestype', string='Occupation Type',

@@ -5,113 +5,106 @@
 
     <!-- Order Page -->
     <!-- Form view of new order data -->
-    <record id="view_food_order_form" model="ir.ui.view">
-        <field name="name">food_order.form</field>
-        <field name="model">food.order</field>
-        <field name="arch" type="xml">
-            <form string="Customer Order Details">
+<!--    <record id="view_food_order_form" model="ir.ui.view">-->
+<!--        <field name="name">food_order.form</field>-->
+<!--        <field name="model">food.order</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <form string="Customer Order Details">-->
 
-                <sheet>
-                    <h3 class="font-weight-bold">
-                        Customer Order Form
-                    </h3>
-                    <div class="oe_title">
-                        <label for="name" class="oe_edit_only"/>
-                        <h1>
-                            <field name="name"/>
-                        </h1>
-                    </div>
-                    <notebook colspan="4">
-                        <page string="Order Details" name="general_info">
-                            <group>
-                                <group>
-                                    <field name="table"
-                                           string="Table No."/>
-                                    <field name="order_number"
-                                           string="Order Number"/>
-                                    <field name="order_date"
-                                           string="Order Date"/>
-                                    <field name="order_customer"
-                                           strig="Order Customer"/>
-                                </group>
-                            </group>
-                        </page>
+<!--                <sheet>-->
+<!--                    <h3 class="font-weight-bold">-->
+<!--                        Customer Order Form-->
+<!--                    </h3>-->
+<!--                    <div class="oe_title">-->
+<!--                        <label for="name" class="oe_edit_only"/>-->
+<!--                        <h1>-->
+<!--                            <field name="name"/>-->
+<!--                        </h1>-->
+<!--                    </div>-->
+<!--                    <notebook colspan="4">-->
+<!--                        <page string="Order Details" name="general_info">-->
+<!--                            <group>-->
+<!--                                <group>-->
+<!--                                    <field name="table"-->
+<!--                                           string="Table No."/>-->
+<!--                                    <field name="order_number"-->
+<!--                                           string="Order Number"/>-->
+<!--                                    <field name="order_date"-->
+<!--                                           string="Order Date"/>-->
+<!--                                    <field name="order_customer"-->
+<!--                                           strig="Order Customer"/>-->
+<!--                                </group>-->
+<!--                            </group>-->
+<!--                        </page>-->
 
-                        <page string="Order Details" name="new_dish">
-                            <group>
-                                    <field name="order_dish"/>
-                                    <field name="order_server"/>
-                                </group>
-                        </page>
-                        <page string="Bill and Details" name="new_dish">
-                            <group>
-                                    <field name="order_amount"/>
-                                    <field name="order_comments"/>
-                                </group>
-                        </page>
-                    </notebook>
-                </sheet>
-            </form>
-        </field>
-    </record>
+<!--                        <page string="Order Details" name="new_dish">-->
+<!--                            <group>-->
+<!--                                    <field name="order_dish"/>-->
+<!--&lt;!&ndash;                                    <field name="order_server"/>&ndash;&gt;-->
+<!--                                </group>-->
+<!--                        </page>-->
+<!--                        <page string="Bill and Details" name="new_dish">-->
+<!--                            <group>-->
+<!--                                    <field name="order_amount"/>-->
+<!--                                    <field name="order_comments"/>-->
+<!--                                </group>-->
+<!--                        </page>-->
+<!--                    </notebook>-->
+<!--                </sheet>-->
+<!--            </form>-->
+<!--        </field>-->
+<!--    </record>-->
 
     <!-- Tree view of hotel restaurant tables -->
     <record id="view_food_order_tree" model="ir.ui.view">
-        <field name="name">food_order.tree</field>
-        <field name="model">food.order</field>
+        <field name="name">lunch_product.tree</field>
+        <field name="model">lunch.product</field>
+        <field name="inherit_id" ref="lunch.lunch_product_view_tree"/>
         <field name="arch" type="xml">
-            <tree string="Order Summary">
-                <field name="name"/>
-                <field name="table"/>
-                <field name="order_number"/>
-                <field name="order_date"/>
-                <field name="order_customer"/>
-                <field name="order_dish"/>
-                <field name="order_server"/>
-                <field name="order_amount"/>
-                <field name="order_comments"/>
-
-            </tree>
+            <field name="name" position="after">
+                <field name="order_comments" select="0"/>
+            </field>
         </field>
+
     </record>
 
-    <!-- Search view of hotel restaurant tables -->
-    <record id="view_food_order_search" model="ir.ui.view">
-        <field name="name">food_order.search</field>
-        <field name="model">food.order</field>
-        <field name="arch" type="xml">
-            <search string="Customer Detail">
-                <field name="name"/>
-                <field name="table"/>
-                <field name="order_number"/>
-                <field name="order_date"/>
-                <field name="order_customer"/>
-                <field name="order_dish"/>
-                <field name="order_server"/>
-                <field name="order_amount"/>
-                <field name="order_comments"/>
-                <newline/>
-            </search>
-        </field>
-    </record>
+<!--    &lt;!&ndash; Search view of hotel restaurant tables &ndash;&gt;-->
+<!--    <record id="view_food_order_search" model="ir.ui.view">-->
+<!--        <field name="name">food_order.search</field>-->
+<!--        <field name="model">food.order</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <search string="Customer Detail">-->
+<!--                <field name="name"/>-->
+<!--                <field name="table"/>-->
+<!--                <field name="order_number"/>-->
+<!--                <field name="order_date"/>-->
+<!--                <field name="order_customer"/>-->
+<!--                <field name="order_dish"/>-->
+<!--&lt;!&ndash;                <field name="order_server"/>&ndash;&gt;-->
+<!--                <field name="order_amount"/>-->
+<!--                <field name="order_comments"/>-->
+<!--                <newline/>-->
+<!--            </search>-->
+<!--        </field>-->
+<!--    </record>-->
 
-    <!-- Action of hotel restaurant tables -->
-    <record id="open_view_food_order_customers_form_tree"
-            model="ir.actions.act_window">
-        <field name="name">Order</field>
-        <field name="res_model">food.order</field>
-        <field name="view_mode">tree,form,kanban</field>
-    </record>
+<!--    &lt;!&ndash; Action of hotel restaurant tables &ndash;&gt;-->
+<!--    <record id="open_view_food_order_customers_form_tree"-->
+<!--            model="ir.actions.act_window">-->
+<!--        <field name="name">Order</field>-->
+<!--        <field name="res_model">food.order</field>-->
+<!--        <field name="view_mode">tree,form,kanban</field>-->
+<!--    </record>-->
 
-    <!-- Parent Menu -->
-    <menuitem name="Restaurant"
-              id="restaurant_top_menu"
-              sequence="0"/>
+<!--    &lt;!&ndash; Parent Menu &ndash;&gt;-->
+<!--    <menuitem name="Restaurant"-->
+<!--              id="restaurant_top_menu"-->
+<!--              sequence="0"/>-->
 
-    <menuitem name="Orders"
-              id="menu_open_view_food_order_customers_form_tree"
-              action="open_view_food_order_customers_form_tree"
-              parent="restaurant_top_menu"/>
+<!--    <menuitem name="Orders"-->
+<!--              id="menu_open_view_food_order_customers_form_tree"-->
+<!--              action="open_view_food_order_customers_form_tree"-->
+<!--              parent="restaurant_top_menu"/>-->
 
 
 </odoo>

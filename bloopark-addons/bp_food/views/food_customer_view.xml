@@ -6,97 +6,87 @@
     <!-- Customer Data Master -->
     <!-- Form view of new customer data -->
     <record id="view_bp_food_customers_form" model="ir.ui.view">
-        <field name="name">bp_food_customers.form</field>
-        <field name="model">bp.food.customers</field>
+        <field name="name">res.partner.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
-            <form string="Customer Detail">
-                <sheet>
-                    <group>
-                        <field name="name" colspan="1"/>
-                        <newline/>
-                        <field name="number"/>
-                        <newline/>
-                        <field name="email"/>
-                    </group>
-                </sheet>
-            </form>
+            <field name="vat" position="after">
+                <field name="orientation" select="0"/>
+            </field>
         </field>
     </record>
 
-    <!-- Tree view of hotel restaurant tables -->
-    <record id="view_bp_food_customers_tree" model="ir.ui.view">
-        <field name="name">bp_food_customers.tree</field>
-        <field name="model">bp.food.customers</field>
-        <field name="arch" type="xml">
-            <tree string="Customer Details">
-                <field name="name"/>
-                <field name="number"/>
-                <field name="email"/>
-            </tree>
-        </field>
-    </record>
-
-    <!-- Search view of hotel restaurant tables -->
-    <record id="view_bp_food_customers_search" model="ir.ui.view">
-        <field name="name">bp_food_customers.search</field>
-        <field name="model">bp.food.customers</field>
-        <field name="arch" type="xml">
-            <search string="Customer Detail">
-                <field name="name"/>
-                <field name="number"/>
-                <field name="email"/>
-                <newline/>
-            </search>
-        </field>
-    </record>
-
-    <!-- Action of hotel restaurant tables -->
-    <record id="open_view_bp_food_customers_form_tree"
-            model="ir.actions.act_window">
-        <field name="name">Customers</field>
-        <field name="res_model">bp.food.customers</field>
-        <field name="view_mode">tree,form</field>
-    </record>
-
-     <!-- Action of data privacy menu -->
-    <record id="open_page_food_customer_data"
-            model="ir.actions.act_window">
-        <field name="name">Customers</field>
-        <field name="res_model">bp.food.customers</field>
-        <field name="view_mode">kanban,tree,form</field>
-    </record>
+<!--     Tree view of hotel restaurant tables -->
+        <record id="view_bp_food_customers_tree" model="ir.ui.view">
+            <field name="name">res.partner.tree</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <field name="vat" position="after">
+                    <field name="orientation" select="0"/>
+                </field>
+            </field>
+        </record>
 
 
-<!-- Parent Menu -->
-    <menuitem name="Restaurant"
-              id="restaurant_top_menu"
-              sequence="7"/>
+        <!-- Kanban view of hotel restaurant customers -->
+<!--    <record id="view_bp_food_customers_kanban" model="ir.ui.view">-->
+<!--        <field name="name">res_partner.kanban</field>-->
+<!--        <field name="model">res.partner.kanban</field>-->
+<!--        <field name="inherit_id" ref="base.res_partner_kanban_view"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <field name="mobile" position="after">-->
+<!--                <field name="orientation" select="0"/>-->
+<!--            </field>-->
+<!--        </field>-->
+<!--    </record>-->
+
+    <!--    &lt;!&ndash; Action of hotel restaurant tables &ndash;&gt;-->
+    <!--    <record id="open_view_bp_food_customers_form_tree"-->
+    <!--            model="ir.actions.act_window">-->
+    <!--        <field name="name">Customers</field>-->
+    <!--        <field name="res_model">bp.food.customers</field>-->
+    <!--        <field name="view_mode">tree,form</field>-->
+    <!--    </record>-->
+
+    <!--     &lt;!&ndash; Action of data privacy menu &ndash;&gt;-->
+    <!--    <record id="open_page_food_customer_data"-->
+    <!--            model="ir.actions.act_window">-->
+    <!--        <field name="name">Customers</field>-->
+    <!--        <field name="res_model">bp.food.customers</field>-->
+    <!--        <field name="view_mode">kanban,tree,form</field>-->
+    <!--    </record>-->
 
 
-    <!-- Main Menu -->
-    <menuitem name="Customers"
-              id="customer_menu"
-              action="open_view_bp_food_customers_form_tree"
-              parent="restaurant_top_menu"
-              sequence="2"/>
+    <!--&lt;!&ndash; Parent Menu &ndash;&gt;-->
+    <!--    <menuitem name="Restaurant"-->
+    <!--              id="restaurant_top_menu"-->
+    <!--              sequence="7"/>-->
 
 
-    <!-- Sub Menu --> <!-- add page here!!!!!!! -->
+    <!--    &lt;!&ndash; Main Menu &ndash;&gt;-->
+    <!--    <menuitem name="Customers"-->
+    <!--              id="customer_menu"-->
+    <!--              action="open_view_bp_food_customers_form_tree"-->
+    <!--              parent="restaurant_top_menu"-->
+    <!--              sequence="2"/>-->
 
-    <menuitem name="Customers Data"
-              id="customer_data_privacy"
-              action="open_page_food_customer_data"
-              parent="customer_menu"
-              sequence="3"/>
+
+    <!--    &lt;!&ndash; Sub Menu &ndash;&gt; &lt;!&ndash; add page here!!!!!!! &ndash;&gt;-->
+
+    <!--    <menuitem name="Customers Data"-->
+    <!--              id="customer_data_privacy"-->
+    <!--              action="open_page_food_customer_data"-->
+    <!--              parent="customer_menu"-->
+    <!--              sequence="3"/>-->
 
 
-    <!-- Sub Menu --><!-- add page here!!!!! -->
+    <!--    &lt;!&ndash; Sub Menu &ndash;&gt;&lt;!&ndash; add page here!!!!! &ndash;&gt;-->
 
-    <menuitem name="EULA"
-              id="customer_eula"
-              parent="customer_menu"
-              sequence="3"/>
-
+    <!--    <menuitem name="EULA"-->
+    <!--              id="customer_eula"-->
+    <!--              parent="customer_menu"-->
+    <!--              sequence="3"/>-->
 
 
 </odoo>

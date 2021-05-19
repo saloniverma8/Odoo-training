@@ -8,7 +8,7 @@ class FoodTables(models.Model):
     _name = 'food.tables'
     _description = 'Tables and Capacity in Restaurant'
 
-    name = fields.Integer(string='Table Number', required=True, index=True)
+    name = fields.Integer(string='Table Number', index=True)
     capacity = fields.Integer("Capacity")
     status = fields.Selection(string='Table Status', selection=[
         ('empty', 'Empty'),
@@ -24,7 +24,7 @@ class FoodTables(models.Model):
     duration = fields.Char(compute='_calendar_duration',
                            string='Duration of calendar', required=True)
     server = fields.Many2one('food.employees', string='Server/Waiter Name')
-    customer = fields.Many2one('bp.food.customers', string='Name of Customer')
+    customer = fields.Many2one('res.partner', string='Name of Customer')
 
     @api.depends('start_time', 'end_time')
     def _calendar_duration(self):

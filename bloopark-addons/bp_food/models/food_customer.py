@@ -3,27 +3,22 @@
 from odoo import models, fields, api
 
 
-class FoodCustomers(models.Model):
-    _name = 'bp.food.customers'
-    _description = 'table for customer data'
+class ResPartner(models.Model):
+    _inherit = 'res.partner'
+    _description = 'customer'
 
+    test = fields.Char()
 
-    name = fields.Char(string='Customer Name', required=True)
-    number = fields.Integer("Phone Number")
-    email = fields.Char("Email")
+    orientation = fields.Selection([
+        ('v', 'Vegan'),
+        ('g', 'Vegetarian'),
+        ('p', 'Pescatarian'),
+        ('n', 'Non-Vegetarian'),
+    ], string='Veg/Non-Veg')
 
-    # @api.depends('number')
-    #
-    #
-    # def _value_pc(self):
-    #     for record in self:
-    #         record.value2 = float(record.value) / 100
-    #
-    #         #function for saving values in DB
-
-
-@api.constrains('number')
-def check_number(self):
-    for rec in self:
-        if len(rec.number)<12:
-            raise ValidationError('Mobile Number incorrect. More number of expected fields')
+    # frequency = fields.Selection([
+    #     ('f', 'Frequent'),
+    #     ('i', 'Intermediate'),
+    #     ('r', 'Rare'),
+    #     ('t', 'First Time'),
+    #     ], string='Frequency')
