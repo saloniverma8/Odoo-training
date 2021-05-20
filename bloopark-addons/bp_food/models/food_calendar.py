@@ -6,13 +6,11 @@ class Calendar(models.Model):
     _name = 'food.calendar'
     _description = 'calendar view of the restaurant tables'
 
-    start_time = fields.Datetime(string='calendar Start Time', required=True
-                                 , default=datetime.now())
-    end_time = fields.Datetime(string='calendar End Time', required=True
-                               , default=datetime.now())
+    start_time = fields.Datetime(string='calendar Start Time', default=datetime.now())
+    end_time = fields.Datetime(string='calendar End Time', default=datetime.now())
     duration = fields.Char(compute='_calendar_duration',
                            string='Duration of calendar', required=True)
-    server = fields.Many2one('food.employees', string='Server/Waiter Name')
+    server = fields.Many2one('hr.employee', string='Server/Waiter Name')
     table = fields.Many2one('food.tables', 'Table No.')
     customer = fields.Many2one('res.partner', string='Name of Customer')
 

@@ -17,13 +17,11 @@ class FoodTables(models.Model):
         ('dirty', 'Dirty'),
     ])
 
-    start_time = fields.Datetime(string='calendar Start Time', required=True
-                                 , default=datetime.now())
-    end_time = fields.Datetime(string='calendar End Time', required=True
-                               , default=datetime.now())
+    start_time = fields.Datetime(string='calendar Start Time', default=datetime.now())
+    end_time = fields.Datetime(string='calendar End Time', default=datetime.now())
     duration = fields.Char(compute='_calendar_duration',
-                           string='Duration of calendar', required=True)
-    server = fields.Many2one('food.employees', string='Server/Waiter Name')
+                           string='Duration of calendar')
+    server = fields.Many2one('hr.employee', string='Server/Waiter Name')
     customer = fields.Many2one('res.partner', string='Name of Customer')
 
     @api.depends('start_time', 'end_time')
