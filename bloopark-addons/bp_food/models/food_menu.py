@@ -15,4 +15,16 @@ class RestDish(models.Model):
     name = fields.Char("Name of Dish", required=True)
     dish_details = fields.Many2one('food.dishtype', string='Dish Details',
                                     ondelete='set null')
-    dish_comments = fields.Char(string="Any more suggestions?")
+
+    dish_type = fields.Selection([
+        ('veg', 'Vegetarian'),
+        ('nonveg', 'Non-Vegertarian'),
+        ('mix', 'Mixed')], string='Type of Dish')
+    dish_price = fields.Integer(string='Price of the Dish')
+    dish_cuisine = fields.Char(string='Cuisine it belongs to')
+    dish_comments = fields.Char(string='Add Comments about Dish')
+    status = fields.Selection(string='Status', selection=[
+        ('open', 'Open'),
+        ('inprogress', 'In Progress'),
+        ('finished', 'Finished'),
+    ], default='open', required=True)

@@ -41,6 +41,9 @@
         <field name="model">food.tables</field>
         <field name="arch" type="xml">
             <form string="Table Details">
+            <header>
+                <button name='check' string='hello' type="object" class="btn-primary"/>
+               </header>
                 <sheet>
                     <group>
                         <field name="name" colspan="1"/>

@@ -33,5 +33,5 @@ class DishType(models.Model):
             'type': 'ir.actions.act_window',
             'name': 'Menu Details and Dishes',
             'view_mode': 'tree',
-            'res_model': 'food.menu',
+            'res_model': 'lunch.product.category',
         }

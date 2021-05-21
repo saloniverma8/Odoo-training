@@ -6,4 +6,5 @@ from . import food_menu
 from . import food_order
 from . import food_tables
 from . import food_dishtype
+from . import food_bporder
 from . import food_employeestype

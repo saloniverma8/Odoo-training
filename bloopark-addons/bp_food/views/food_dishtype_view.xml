@@ -88,7 +88,7 @@
             model="ir.actions.act_window">
         <field name="name">Menu</field>
         <field name="res_model">food.dishtype</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,kanban</field>
     </record>
 
     <!-- Parent Menu -->

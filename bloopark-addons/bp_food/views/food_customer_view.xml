@@ -47,52 +47,6 @@
     <!--        </field>-->
     <!--    </record>-->
 
-    <!--    &lt;!&ndash; Action of hotel restaurant tables &ndash;&gt;-->
-    <!--    <record id="open_view_bp_food_customers_form_tree"-->
-    <!--            model="ir.actions.act_window">-->
-    <!--        <field name="name">Customers</field>-->
-    <!--        <field name="res_model">bp.food.customers</field>-->
-    <!--        <field name="view_mode">tree,form</field>-->
-    <!--    </record>-->
-
-    <!--     &lt;!&ndash; Action of data privacy menu &ndash;&gt;-->
-    <!--    <record id="open_page_food_customer_data"-->
-    <!--            model="ir.actions.act_window">-->
-    <!--        <field name="name">Customers</field>-->
-    <!--        <field name="res_model">bp.food.customers</field>-->
-    <!--        <field name="view_mode">kanban,tree,form</field>-->
-    <!--    </record>-->
-
-
-    <!--&lt;!&ndash; Parent Menu &ndash;&gt;-->
-    <!--    <menuitem name="Restaurant"-->
-    <!--              id="restaurant_top_menu"-->
-    <!--              sequence="7"/>-->
-
-
-    <!--    &lt;!&ndash; Main Menu &ndash;&gt;-->
-    <!--    <menuitem name="Customers"-->
-    <!--              id="customer_menu"-->
-    <!--              action="open_view_bp_food_customers_form_tree"-->
-    <!--              parent="restaurant_top_menu"-->
-    <!--              sequence="2"/>-->
-
-
-    <!--    &lt;!&ndash; Sub Menu &ndash;&gt; &lt;!&ndash; add page here!!!!!!! &ndash;&gt;-->
-
-    <!--    <menuitem name="Customers Data"-->
-    <!--              id="customer_data_privacy"-->
-    <!--              action="open_page_food_customer_data"-->
-    <!--              parent="customer_menu"-->
-    <!--              sequence="3"/>-->
-
-
-    <!--    &lt;!&ndash; Sub Menu &ndash;&gt;&lt;!&ndash; add page here!!!!! &ndash;&gt;-->
-
-    <!--    <menuitem name="EULA"-->
-    <!--              id="customer_eula"-->
-    <!--              parent="customer_menu"-->
-    <!--              sequence="3"/>-->
 
 
 </odoo>

@@ -29,12 +29,14 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'data/data.xml',
         'views/food_customer_view.xml',
         'views/food_employee_view.xml',
         'views/food_menu_view.xml',
         'views/food_order_view.xml',
         'views/food_tables_view.xml',
         'views/food_dishtype_view.xml',
+        'views/food_bporder_view.xml',
         'views/food_employeestype_view.xml',
         'views/food_calendar.xml',
 
