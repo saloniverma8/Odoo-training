@@ -24,8 +24,8 @@
                             <newline/>
                             <field name="status"/>
                                                     <button name='check' string='hello' type="object" class="btn-primary"/>
-<!--                                                     <button string="Table Suggestion" name="%(check_booking_table)" -->
-<!--      --><!--                                                 type="object" class="oe_stat_button"/> -->
+                                                    <button string="Table Suggestion" name="%(check_booking_table)"
+                                                    type="object" class="oe_stat_button"/>
 
                             <newline/>
 <!--                             <progressbar field="status" colors='{"planned": "success", "today": "warning", "overdue": "danger"}'/> -->
