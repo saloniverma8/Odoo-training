@@ -69,7 +69,6 @@
 
     <!--action of the calendar-->
     <record id="action_calendar" model="ir.actions.act_window">
-        <field name="name">calendar</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">food.tables</field>
         <field name="view_mode">calendar,tree,form</field>

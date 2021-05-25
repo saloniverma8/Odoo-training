@@ -10,9 +10,10 @@
             <field name="arch" type="xml">
                 <form string="Table Details">
                 <header>
+
                 </header>
     <!--                <header> -->
-    <!--                    <button string="Table Suggestion" name="%(table_action_suggestion)" -->
+    <!--                    <button string="Table Suggestion" name="%(check_booking_table)" -->
     <!--                            type="object" class="oe_stat_button"/> -->
     <!--                </header> -->
                     <sheet>
@@ -23,8 +24,11 @@
                             <newline/>
                             <field name="status"/>
                                                     <button name='check' string='hello' type="object" class="btn-primary"/>
+<!--                                                     <button string="Table Suggestion" name="%(check_booking_table)" -->
+<!--      --><!--                                                 type="object" class="oe_stat_button"/> -->
 
                             <newline/>
+<!--                             <progressbar field="status" colors='{"planned": "success", "today": "warning", "overdue": "danger"}'/> -->
                             <field name="server"/>
                         </group>
                     </sheet>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--book table for customer form view-->
+    <record id="enroll_student_form_view" model="ir.ui.view">
+        <field name="name">checking.booking.table.form.view</field>
+        <field name="model">checking.booking.table</field>
+        <field name="arch" type="xml">
+            <form string="Booking">
+                <group>
+                    <field name="customer"/>
+                    <field name="request_start_date"/>
+                    <field name="request_end_date"/>
+                    <field name="available_table"/>
+                    <field name="request_table"/>
+                    <field name="request_status"/>
+                </group>
+                <footer>
+                    <button name="check_table" string="Check" type="object"
+                            class="btn-primary"/>
+
+                    <button string="Cancel" class="btn-secondary"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <!--book table for customer action-->
+    <record id="check_booking_table" model="ir.actions.act_window">
+        <field name="name">Check Booking</field>
+        <field name="res_model">check.booking.table</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

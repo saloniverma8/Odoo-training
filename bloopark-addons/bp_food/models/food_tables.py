@@ -38,14 +38,14 @@ class FoodTables(models.Model):
             per.duration = timedelta(seconds=calendar.seconds)
 
     # color = fields.Integer('Color Index', compute="change_colore_on_kanban")
-    color = fields.Integer("color")
+    member_color = fields.Integer(compute='_check_color')
+    color = fields.Integer(string='color')
 
     def check(self):
         print('6666666666666666666666666666')
         return True
 
-    def change_colore_on_kanban(self):
-
+    def _check_color(self, status):
         for name in self:
             color = 0
             if name.status == 'occupied':

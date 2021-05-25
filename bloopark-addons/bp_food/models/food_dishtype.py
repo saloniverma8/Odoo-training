@@ -28,10 +28,4 @@ class DishType(models.Model):
     ], default='open', required=True)
 
 
-    def dish_final(self):
-        return {
-            'type': 'ir.actions.act_window',
-            'name': 'Menu Details and Dishes',
-            'view_mode': 'tree',
-            'res_model': 'lunch.product.category',
-        }
+
