@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
-from . import food_customer
-from . import food_employees
+from . import res_partner
+from . import hr_employee
 from . import food_menu
 from . import food_order
-from . import food_tables
+from . import food_table
 from . import food_dishtype
 from . import suggestion_wizard
 from . import food_employeestype

@@ -97,12 +97,7 @@
               sequence="0"/>
 
 
-    <!--    &lt;!&ndash; Main Menu &ndash;&gt;-->
-    <!--    <menuitem name="Employees"-->
-    <!--              id="employee_menu"-->
-    <!--              parent="restaurant_top_menu"/>-->
-
-    <menuitem name="Suggest New Dishes"
+    <menuitem name="New Dish Suggestions"
               id="food_dishtype_form_tree"
               action="open_view_food_dishtype_form_tree"
               parent="restaurant_top_menu"/>

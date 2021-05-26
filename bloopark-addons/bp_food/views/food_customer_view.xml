@@ -11,7 +11,7 @@
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
             <field name="vat" position="after">
-                <field name="orientation" select="0"/>
+                <field name="orientation"/>
             </field>
             <field name="vat" position="after">
                 <field name="frequency" select="0"/>
@@ -26,28 +26,13 @@
         <field name="inherit_id" ref="base.view_partner_tree"/>
         <field name="arch" type="xml">
             <field name="vat" position="after">
-                <field name="orientation" select="0"/>
+                <field name="orientation"/>
             </field>
             <field name="vat" position="after">
                 <field name="frequency" select="0"/>
             </field>
         </field>
     </record>
-
-
-    <!-- Kanban view of hotel restaurant customers -->
-    <!--    <record id="view_bp_food_customers_kanban" model="ir.ui.view">-->
-    <!--        <field name="name">res_partner.kanban</field>-->
-    <!--        <field name="model">res.partner.kanban</field>-->
-    <!--        <field name="inherit_id" ref="base.res_partner_kanban_view"/>-->
-    <!--        <field name="arch" type="xml">-->
-    <!--            <field name="mobile" position="after">-->
-    <!--                <field name="orientation" select="0"/>-->
-    <!--            </field>-->
-    <!--        </field>-->
-    <!--    </record>-->
-
-
 
 </odoo>
 

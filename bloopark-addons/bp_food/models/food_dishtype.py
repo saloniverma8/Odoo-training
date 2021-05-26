@@ -23,7 +23,7 @@ class DishType(models.Model):
     dish_comments = fields.Char(string='Add Comments about Dish')
     status = fields.Selection(string='Status', selection=[
         ('open', 'Open'),
-        ('inprogress', 'In Progress'),
+        ('in_progress', 'In Progress'),
         ('finished', 'Finished'),
     ], default='open', required=True)
 

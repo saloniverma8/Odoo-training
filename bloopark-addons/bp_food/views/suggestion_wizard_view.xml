@@ -13,7 +13,6 @@
                     <field name="existing_table"/>
                     <field name="available_start"/>
                     <field name="available_end"/>
-                    <field name="request_status"/>
                 </tree>
             </field>
         </record>
@@ -34,7 +33,6 @@
                         <field name="available_start"/>
                         <field name="available_end"/>
                         <field name="existing_table"/>
-                        <field name="request_status"/>
                  </group>
                 </sheet>
 <!--                 <footer> -->

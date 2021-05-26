@@ -10,12 +10,9 @@
             <field name="model">hr.employee</field>
             <field name="inherit_id" ref="hr.view_employee_form"/>
             <field name="arch" type="xml">
-<!--                <group>-->
-<!--                <group string='Occupation' name="occupation_group">-->
                     <field name="user_id" position="before">
                         <field name="occupation" select="0"/>
                     </field>
-<!--                </group>-->
             </field>
         </record>
 

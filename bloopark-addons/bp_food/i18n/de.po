@@ -21166,7 +21166,7 @@ msgid "Cannot setup the payment."
 msgstr "Die Zahlung kann nicht eingerichtet werden."
 
 #. modules: mrp, bp_food
-#: model:ir.model.fields,field_description:bp_food.field_food_tables__capacity
+#: model:ir.model.fields,field_description:bp_food.field_food.table__capacity
 #: model:ir.model.fields,field_description:mrp.field_mrp_workcenter__capacity
 msgid "Capacity"
 msgstr "Kapazität"
@@ -26454,7 +26454,7 @@ msgstr "Erstellte Ansichten"
 #: model:ir.model.fields,field_description:bp_food.field_food_dishtype__create_uid
 #: model:ir.model.fields,field_description:bp_food.field_food_employeestype__create_uid
 #: model:ir.model.fields,field_description:bp_food.field_food_menu__create_uid
-#: model:ir.model.fields,field_description:bp_food.field_food_tables__create_uid
+#: model:ir.model.fields,field_description:bp_food.field_food.table__create_uid
 #: model:ir.model.fields,field_description:bus.field_bus_bus__create_uid
 #: model:ir.model.fields,field_description:calendar.field_calendar_alarm__create_uid
 #: model:ir.model.fields,field_description:calendar.field_calendar_attendee__create_uid
@@ -26824,7 +26824,7 @@ msgstr "Erstellt von"
 #: model:ir.model.fields,field_description:bp_food.field_food_dishtype__create_date
 #: model:ir.model.fields,field_description:bp_food.field_food_employeestype__create_date
 #: model:ir.model.fields,field_description:bp_food.field_food_menu__create_date
-#: model:ir.model.fields,field_description:bp_food.field_food_tables__create_date
+#: model:ir.model.fields,field_description:bp_food.field_food.table__create_date
 #: model:ir.model.fields,field_description:bus.field_bus_bus__create_date
 #: model:ir.model.fields,field_description:calendar.field_calendar_alarm__create_date
 #: model:ir.model.fields,field_description:calendar.field_calendar_attendee__create_date
@@ -30377,7 +30377,7 @@ msgid "Direction"
 msgstr "Strategie"
 
 #. module: bp_food
-#: model:ir.model.fields.selection,name:bp_food.selection__food_tables__status__dirty
+#: model:ir.model.fields.selection,name:bp_food.selection__food.table__status__dirty
 msgid "Dirty"
 msgstr ""
 
@@ -30874,7 +30874,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:bp_food.field_food_dishtype__display_name
 #: model:ir.model.fields,field_description:bp_food.field_food_employeestype__display_name
 #: model:ir.model.fields,field_description:bp_food.field_food_menu__display_name
-#: model:ir.model.fields,field_description:bp_food.field_food_tables__display_name
+#: model:ir.model.fields,field_description:bp_food.field_food.table__display_name
 #: model:ir.model.fields,field_description:bus.field_bus_bus__display_name
 #: model:ir.model.fields,field_description:bus.field_bus_presence__display_name
 #: model:ir.model.fields,field_description:calendar.field_calendar_attendee__display_name
@@ -32361,7 +32361,7 @@ msgid "Duration in minutes"
 msgstr "Dauer in Minuten"
 
 #. module: bp_food
-#: model:ir.model.fields,field_description:bp_food.field_food_tables__duration
+#: model:ir.model.fields,field_description:bp_food.field_food.table__duration
 msgid "Duration of calendar"
 msgstr ""
 
@@ -33383,7 +33383,7 @@ msgid "Employees with access"
 msgstr ""
 
 #. module: bp_food
-#: model:ir.model.fields.selection,name:bp_food.selection__food_tables__status__empty
+#: model:ir.model.fields.selection,name:bp_food.selection__food.table__status__empty
 msgid "Empty"
 msgstr ""
 
@@ -39547,7 +39547,7 @@ msgstr "IBAN Bankkonten"
 #: model:ir.model.fields,field_description:bp_food.field_food_dishtype__id
 #: model:ir.model.fields,field_description:bp_food.field_food_employeestype__id
 #: model:ir.model.fields,field_description:bp_food.field_food_menu__id
-#: model:ir.model.fields,field_description:bp_food.field_food_tables__id
+#: model:ir.model.fields,field_description:bp_food.field_food.table__id
 #: model:ir.model.fields,field_description:bus.field_bus_bus__id
 #: model:ir.model.fields,field_description:bus.field_bus_presence__id
 #: model:ir.model.fields,field_description:calendar.field_calendar_attendee__id
@@ -45301,7 +45301,7 @@ msgstr "Letzter Mittagessen-Ort"
 #: model:ir.model.fields,field_description:bp_food.field_food_dishtype____last_update
 #: model:ir.model.fields,field_description:bp_food.field_food_employeestype____last_update
 #: model:ir.model.fields,field_description:bp_food.field_food_menu____last_update
-#: model:ir.model.fields,field_description:bp_food.field_food_tables____last_update
+#: model:ir.model.fields,field_description:bp_food.field_food.table____last_update
 #: model:ir.model.fields,field_description:bus.field_bus_bus____last_update
 #: model:ir.model.fields,field_description:bus.field_bus_presence____last_update
 #: model:ir.model.fields,field_description:calendar.field_calendar_attendee____last_update
@@ -45803,7 +45803,7 @@ msgstr "Aktuellste Stufenaktualisierung"
 #: model:ir.model.fields,field_description:bp_food.field_food_dishtype__write_uid
 #: model:ir.model.fields,field_description:bp_food.field_food_employeestype__write_uid
 #: model:ir.model.fields,field_description:bp_food.field_food_menu__write_uid
-#: model:ir.model.fields,field_description:bp_food.field_food_tables__write_uid
+#: model:ir.model.fields,field_description:bp_food.field_food.table__write_uid
 #: model:ir.model.fields,field_description:bus.field_bus_bus__write_uid
 #: model:ir.model.fields,field_description:calendar.field_calendar_alarm__write_uid
 #: model:ir.model.fields,field_description:calendar.field_calendar_attendee__write_uid
@@ -46171,7 +46171,7 @@ msgstr "Zuletzt aktualisiert durch"
 #: model:ir.model.fields,field_description:bp_food.field_food_dishtype__write_date
 #: model:ir.model.fields,field_description:bp_food.field_food_employeestype__write_date
 #: model:ir.model.fields,field_description:bp_food.field_food_menu__write_date
-#: model:ir.model.fields,field_description:bp_food.field_food_tables__write_date
+#: model:ir.model.fields,field_description:bp_food.field_food.table__write_date
 #: model:ir.model.fields,field_description:bus.field_bus_bus__write_date
 #: model:ir.model.fields,field_description:calendar.field_calendar_alarm__write_date
 #: model:ir.model.fields,field_description:calendar.field_calendar_attendee__write_date
@@ -51846,7 +51846,7 @@ msgid "Name get of the related document."
 msgstr "Bezeichnung kommt vom verbundenen Dokument"
 
 #. module: bp_food
-#: model:ir.model.fields,field_description:bp_food.field_food_tables__customer
+#: model:ir.model.fields,field_description:bp_food.field_food.table__customer
 msgid "Name of Customer"
 msgstr ""
 
@@ -54351,7 +54351,7 @@ msgid "Occupation of the Person in the Restaurant?"
 msgstr ""
 
 #. module: bp_food
-#: model:ir.model.fields.selection,name:bp_food.selection__food_tables__status__occupied
+#: model:ir.model.fields.selection,name:bp_food.selection__food.table__status__occupied
 msgid "Occupied"
 msgstr ""
 
@@ -67052,7 +67052,7 @@ msgstr "Reservierungen"
 #. openerp-web
 #: code:addons/sale_stock/static/src/xml/sale_stock.xml:0
 #: model:ir.model.fields,field_description:stock.field_stock_move_line__product_uom_qty
-#: model:ir.model.fields.selection,name:bp_food.selection__food_tables__status__reserved
+#: model:ir.model.fields.selection,name:bp_food.selection__food.table__status__reserved
 #: model:ir.model.fields.selection,name:stock.selection__stock_package_level__state__assigned
 #: model_terms:ir.ui.view,arch_db:mrp.mrp_production_form_view
 #: model_terms:ir.ui.view,arch_db:stock.view_picking_form
@@ -71492,7 +71492,7 @@ msgid "Server type POP."
 msgstr "Servertyp POP."
 
 #. module: bp_food
-#: model:ir.model.fields,field_description:bp_food.field_food_tables__server
+#: model:ir.model.fields,field_description:bp_food.field_food.table__server
 msgid "Server/Waiter Name"
 msgstr ""
 
@@ -74136,7 +74136,7 @@ msgstr "Statistik"
 #: model:ir.model.fields,field_description:base.field_ir_translation__state
 #: model:ir.model.fields,field_description:bp_food.field_food_dishtype__status
 #: model:ir.model.fields,field_description:bp_food.field_food_menu__status
-#: model:ir.model.fields,field_description:bp_food.field_food_tables__status
+#: model:ir.model.fields,field_description:bp_food.field_food.table__status
 #: model:ir.model.fields,field_description:calendar.field_calendar_attendee__state
 #: model:ir.model.fields,field_description:crm_iap_lead.field_crm_iap_lead_mining_request__state
 #: model:ir.model.fields,field_description:digest.field_digest_digest__state
@@ -75296,7 +75296,7 @@ msgstr "Tabulator"
 #. modules: web_editor, mrp, bp_food
 #. openerp-web
 #: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
-#: model:ir.model.fields,field_description:bp_food.field_food_tables__name
+#: model:ir.model.fields,field_description:bp_food.field_food.table__name
 #: model:product.product,name:mrp.product_product_computer_desk
 #: model:product.template,name:mrp.product_product_computer_desk_product_template
 #, python-format
@@ -75304,14 +75304,14 @@ msgid "Table"
 msgstr "Tabelle"
 
 #. module: bp_food
-#: model_terms:ir.ui.view,arch_db:bp_food.view_food_tables_search
+#: model_terms:ir.ui.view,arch_db:bp_food.view_food.table_search
 msgid "Table Detail"
 msgstr ""
 
 #. module: bp_food
 #: model_terms:ir.ui.view,arch_db:bp_food.view_calendar_tables_form
-#: model_terms:ir.ui.view,arch_db:bp_food.view_food_tables_form
-#: model_terms:ir.ui.view,arch_db:bp_food.view_food_tables_tree
+#: model_terms:ir.ui.view,arch_db:bp_food.view_food.table_form
+#: model_terms:ir.ui.view,arch_db:bp_food.view_food.table_tree
 msgid "Table Details"
 msgstr ""
 
@@ -75355,14 +75355,14 @@ msgid "Table:"
 msgstr ""
 
 #. modules: barcodes, bp_food
-#: model:ir.actions.act_window,name:bp_food.open_view_food_tables_form_tree
-#: model:ir.ui.menu,name:bp_food.tables_menu
+#: model:ir.actions.act_window,name:bp_food.open_view_food.table_form_tree
+#: model:ir.ui.menu,name:bp_food.table_menu
 #: model_terms:ir.ui.view,arch_db:barcodes.view_barcode_nomenclature_form
 msgid "Tables"
 msgstr "Tabellen"
 
 #. module: bp_food
-#: model:ir.model,name:bp_food.model_food_tables
+#: model:ir.model,name:bp_food.model_food.table
 msgid "Tables and Capacity in Restaurant"
 msgstr ""
 
@@ -92857,12 +92857,12 @@ msgid "calendar Calender"
 msgstr ""
 
 #. module: bp_food
-#: model:ir.model.fields,field_description:bp_food.field_food_tables__end_time
+#: model:ir.model.fields,field_description:bp_food.field_food.table__end_time
 msgid "calendar End Time"
 msgstr ""
 
 #. module: bp_food
-#: model:ir.model.fields,field_description:bp_food.field_food_tables__start_time
+#: model:ir.model.fields,field_description:bp_food.field_food.table__start_time
 msgid "calendar Start Time"
 msgstr ""
 
@@ -92949,7 +92949,7 @@ msgid "code"
 msgstr "Code"
 
 #. module: bp_food
-#: model:ir.model.fields,field_description:bp_food.field_food_tables__color
+#: model:ir.model.fields,field_description:bp_food.field_food.table__color
 msgid "color"
 msgstr ""
 
@@ -93565,7 +93565,7 @@ msgstr ""
 
 #. module: bp_food
 #: model_terms:ir.ui.view,arch_db:bp_food.view_calendar_tables_form
-#: model_terms:ir.ui.view,arch_db:bp_food.view_food_tables_form
+#: model_terms:ir.ui.view,arch_db:bp_food.view_food.table_form
 msgid "hello"
 msgstr ""
 
