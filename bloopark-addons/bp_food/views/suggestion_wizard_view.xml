@@ -10,9 +10,9 @@
                     <field name="customer"/>
                     <field name="request_start_date"/>
                     <field name="request_end_date"/>
-<!--                     <field name="current_table"/> -->
-<!--                     <field name="existing_table_end"/> -->
-                    <field name="available_table"/>
+                    <field name="existing_table"/>
+                    <field name="available_start"/>
+                    <field name="available_end"/>
                     <field name="request_status"/>
                 </tree>
             </field>
@@ -26,15 +26,17 @@
         <field name="model">check.booking.table</field>
         <field name="arch" type="xml">
             <form string="Booking">
-                <group>
-                    <field name="customer"/>
-                    <field name="request_start_date"/>
-                    <field name="request_end_date"/>
-                    <field name="available_table"/>
-                    <field name="existing_table"/>
-<!--                     <field name="current_table_end"/> -->
-                    <field name="request_status"/>
-                </group>
+                <sheet>
+                    <group>
+                        <field name="customer"/>
+                        <field name="request_start_date"/>
+                        <field name="request_end_date"/>
+                        <field name="available_start"/>
+                        <field name="available_end"/>
+                        <field name="existing_table"/>
+                        <field name="request_status"/>
+                 </group>
+                </sheet>
 <!--                 <footer> -->
 <!--                     <button name="check_table" string="Check" type="object" -->
 <!--                             class="btn-primary"/> -->
@@ -46,14 +48,6 @@
         </field>
     </record>
 
-
-    <!--book table for customer action-->
-<!--     <record id="check_booking_table" model="ir.actions.act_window"> -->
-<!--         <field name="name">Check Booking</field> -->
-<!--         <field name="res_model">check.booking.table</field> -->
-<!--         <field name="view_mode">form</field> -->
-<!--         <field name="target">new</field> -->
-<!--     </record> -->
     <!-- Action of hotel restaurant tables -->
     <record id="check_booking_table"
             model="ir.actions.act_window">
@@ -66,11 +60,6 @@
               id="restaurant_top_menu"
               sequence="0"/>
 
-
-<!--    &lt;!&ndash; Main Menu &ndash;&gt;-->
-<!--    <menuitem name="Employees"-->
-<!--              id="employee_menu"-->
-<!--              parent="restaurant_top_menu"/>-->
 
     <menuitem name="Booking"
               id="menu_open_view_check_booking_table_form_tree"

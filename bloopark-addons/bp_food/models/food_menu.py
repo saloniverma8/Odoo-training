@@ -20,7 +20,7 @@ class RestDish(models.Model):
         ('veg', 'Vegetarian'),
         ('nonveg', 'Non-Vegertarian'),
         ('mix', 'Mixed')], string='Type of Dish')
-    dish_price = fields.Integer(string='Price of the Dish')
+    dish_price = fields.Float(string='Price of the Dish')
     dish_cuisine = fields.Char(string='Cuisine it belongs to')
     dish_comments = fields.Char(string='Add Comments about Dish')
     status = fields.Selection(string='Status', selection=[

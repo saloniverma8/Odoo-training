@@ -22,6 +22,8 @@
                         <newline/>
                         <field name="order_dish"/>
                         <newline/>
+                        <field name="order_dishprice"/>
+                        <newline/>
                         <field name="order_server"/>
                         <newline/>
                         <field name="order_amount"/>
@@ -45,6 +47,7 @@
                 <field name="order_date"/>
                 <field name="order_customer"/>
                 <field name="order_dish"/>
+                <field name="order_dishprice"/>
                 <field name="order_server"/>
                 <field name="order_amount"/>
                 <field name="order_comments"/>
@@ -64,6 +67,7 @@
                 <field name="order_date"/>
                 <field name="order_customer"/>
                 <field name="order_dish"/>
+                <field name="order_dishprice"/>
                 <field name="order_server"/>
                 <field name="order_amount"/>
                 <field name="order_comments"/>

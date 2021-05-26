@@ -1,4 +1,5 @@
 from odoo import fields, models, api
+from datetime import datetime, timedelta
 from odoo.exceptions import ValidationError
 
 
@@ -7,14 +8,15 @@ class CheckBookingWizard(models.Model):
     _description = "Booking"
 
     current_tables = fields.Many2many('food.tables')
-    current_table_end = fields.Datetime(related='current_tables.end_time',
-                                           string='Booked End Table', readonly=True)
+    # current_table_end = fields.Datetime(related='current_tables.end_time',
+    #                                        string='Booked End Table', readonly=True)
     name = fields.Char("name")
     customer = fields.Many2one('res.partner')
     request_start_date = fields.Datetime("Request Start DateTime")
     request_end_date = fields.Datetime("Request End DateTime")
-    existing_table = fields.Many2one('food.tables')
-    available_table = fields.Datetime(related='existing_table.end_time')
+    existing_table = fields.Many2one('food.tables', required=True)
+    available_end = fields.Datetime(related='existing_table.end_time')
+    available_start = fields.Datetime(related='existing_table.start_time')
     # request_table = fields.Char('table no')
     # available_table = fields.Selection(selection='_check_table', string='Available Table')
     # request_status = fields.One2many(related='request_table.status',
@@ -27,22 +29,24 @@ class CheckBookingWizard(models.Model):
         tables.append(("21", "21"))
         return tables
 
+    @api.constrains('request_start_date', 'request_end_date')
+    def _check_table_time(self):
+        if self.request_end_date <= self.request_start_date:
+            # print(self.end_time)
+            raise ValidationError('End time must be after Start time')
 
-        # for rec in self:
-        # for rec.request_table:
-        #     raise ValidationError('table can be booked')
-        # else:
-        #     raise ValidationError('table cannot be booked')
-
-
-        # return {
-        #     'type': 'ir.actions.act_window',
-        #     'name': 'food.tables.booking',
-        #     'view_mode': 'form',
-        #     'res_model': 'food.tables',
-        #     'res_id': available_table,
-        #     'target': 'current',
-        #     'context': {
-        #         'form_view_initial_mode': 'edit',
-        #                 },
-        #         }
+    @api.constrains('request_start_date', 'available_end')
+    def _check_availability(self):
+        for rec in self:
+            if rec.request_end_date <= rec.request_start_date:
+                raise ValidationError('Invalid end date!')
+            elif (rec.request_start_date > rec.available_start) and (rec.request_end_date < rec.available_end):
+                raise ValidationError('This table is already booked for this time window!')
+            elif (rec.request_start_date < rec.available_end) and (rec.request_end_date > rec.available_end):
+                raise ValidationError('Table cannot be booked starting at this time!')
+            elif (rec.request_start_date < rec.available_start) and (rec.request_end_date > rec.available_start):
+                raise ValidationError('Table cannot be booked until this time!')
+            elif rec.request_start_date < datetime.now():
+                raise ValidationError('Your table cannot be booked in the past!')
+            else:
+                raise ValidationError('Yay! Table can be booked.')
