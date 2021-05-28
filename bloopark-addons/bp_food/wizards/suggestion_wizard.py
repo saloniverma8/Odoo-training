@@ -5,11 +5,9 @@ from odoo.exceptions import ValidationError
 
 class CheckBookingWizard(models.TransientModel):
     _name = 'check.booking.table'
-    _description = "Booking"
+    _description = "Wizard for New Booking"
 
     current_tables = fields.Many2many('food.table')
-    # current_table_end = fields.Datetime(related='current_tables.end_time',
-    #                                        string='Booked End Table', readonly=True)
     name = fields.Char("name")
     customer = fields.Many2one('res.partner')
     request_start_date = fields.Datetime("Request Start DateTime")
@@ -24,24 +22,7 @@ class CheckBookingWizard(models.TransientModel):
             # print(self.end_time)
             raise ValidationError('End time must be after Start time')
 
-    # @api.constrains('request_start_date', 'available_end')
-    # def _check_availability(self):
-    #     for rec in self:
-    #         if rec.request_end_date <= rec.request_start_date:
-    #             raise ValidationError('Invalid end date!')
-    #         elif (rec.request_start_date > rec.available_start) and (rec.request_end_date < rec.available_end):
-    #             raise ValidationError('This table is already booked for this time window!')
-    #         elif (rec.request_start_date < rec.available_end) and (rec.request_end_date > rec.available_end):
-    #             raise ValidationError('Table cannot be booked starting at this time!')
-    #         elif (rec.request_start_date < rec.available_start) and (rec.request_end_date > rec.available_start):
-    #             raise ValidationError('Table cannot be booked until this time!')
-    #         elif rec.request_start_date < datetime.now():
-    #             raise ValidationError('Your table cannot be booked in the past!')
-    #         else:
-    #             raise ValidationError('Yay! Table can be booked.')
-
     def check_table(self):
-        print('**************************************')
         for rec in self:
             if rec.request_end_date <= rec.request_start_date:
                 raise ValidationError('Invalid end date!')

@@ -23,7 +23,7 @@ class FoodOrder(models.Model):
     order_dish_id = fields.Many2many('food.menu', string='Dish to be Ordered')
     order_dishprice = fields.Float(related='order_dish_id.dish_price')
     order_server = fields.Many2one('hr.employee', string='Server/Waiter Name')
-    order_amount = fields.Float(string='Bill Total', compute='_compute_total_price')
+    order_amount = fields.Float(string='Items Total', compute='_compute_total_price')
     quantity = fields.Integer('Quantity', required=True, default=1)
     order_comments = fields.Text('Add comments here for customisation or Allergies')
 
@@ -50,3 +50,8 @@ class FoodOrder(models.Model):
     def _compute_total_price(self):
         for line in self:
             line.order_amount = line.quantity * line.order_dish_id.dish_price
+
+
+
+
+

@@ -20,4 +20,4 @@ class ResPartner(models.Model):
         ('intermed', 'Intermediate'),
         ('rare', 'Rare'),
         ('first', 'First Time'),
-        ], string='Frequency')
+        ], string='Frequency', default='first')
